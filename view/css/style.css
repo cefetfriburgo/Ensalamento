@@ -1,0 +1,46 @@
+.container{
+    border:1px solid #ccc;
+}
+.menu-options{
+    border:1px solid #fff;
+}
+.input-group-text{
+    width: 90px;
+    text-align:left;
+}
+.input-group{
+    width:30%;
+    
+}
+.menu-sala{
+    margin:1% auto;
+    text-align: center;
+    width: 95%;
+}
+.table{
+    overflow-y: scroll;
+}
+.table td{
+    text-align: left;
+    border:1px solid #ccc;
+    text-align: center;
+    padding:5px;
+    padding:5px 1px 5px 1px;
+}
+.table th{
+    border:1px solid #ccc;
+    text-align: center;
+}
+.button{
+    margin:0;
+}
+.section-calendar{
+    max-height: 400px;
+    overflow-y:scroll;
+}
+.barra{
+    margin-top: 1%;
+    text-align: center;
+    background-color: #333;
+    color:#ccc;
+}
