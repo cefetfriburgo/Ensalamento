@@ -15,7 +15,7 @@ require_once '../model/modeloLogin.php';
         session_start();
         $_SESSION['email'] = $email;
         //echo 'logou';
-        header('location: ../view/teste.php');
+        header('location: ../view/home.html');
     }else{
         echo 'nao logou';
         // header('location: ../view/index.html');

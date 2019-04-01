@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Enslamento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lista-sala.css">
+</head>
+<body>
+        <header>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="navbar-brand" href="home.html">Sistema de reserva de salas</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                            <ul class="navbar-nav ml-auto mr-5">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="home.html">Home <span class="sr-only">(página atual)</span></a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDrop-sala" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Salas
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDrop-sala">
+                                        <a class="dropdown-item" href="registro-sala.html">Registrar Sala</a>
+                                        <a class="dropdown-item" href="lista-sala.html">Listar Salas</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDrop-sala" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Usuários
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDrop-sala">
+                                        <a class="dropdown-item" href="registro-user.html">Registrar Usuário</a>
+                                        <a class="dropdown-item" href="lista-user.html">Listar Usuários</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Login</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+            </header>
+        <div class="container">
+            <h4>Lista de Salas</h4>
+            <div class="bord"></div>
+            <div class="input-group">
+                    <div class="search">
+                            <input type="text" name="search-sala" id="search-sala" placeholder=" Buscar Salas">
+                            <label for="search-sala" onclick="ola()" id="search-sala-label"><i class="fas fa-search"></i></label>
+                    </div>
+            </div>
+            
+            <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Capacidade</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Local</th>
+                        <th scope="col">Recursos</th>
+                        <th scope="col">Opções</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>SALA 13</td>
+                        <td>26</td>
+                        <td>Normal</td>
+                        <td>Campus I</td>
+                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalVerRecursos">Vizualizar</button></td>
+                        <td>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SALA 13</td>
+                        <td>26</td>
+                        <td>Normal</td>
+                        <td>Campus I</td>
+                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalVerRecursos">Vizualizar</button></td>
+                        <td>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SALA 13</td>
+                        <td>26</td>
+                        <td>Normal</td>
+                        <td>Campus I</td>
+                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalVerRecursos">Vizualizar</button></td>
+                        <td>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
+                        </td>
+                    </tr>
+                        <tr>
+                        <td>SALA 13</td>
+                        <td>26</td>
+                        <td>Normal</td>
+                        <td>Campus I</td>
+                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalVerRecursos">Vizualizar</button></td>
+                        <td>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SALA 13</td>
+                        <td>26</td>
+                        <td>Normal</td>
+                        <td>Campus I</td>
+                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalVerRecursos">Vizualizar</button></td>
+                        <td>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SALA 13</td>
+                        <td>26</td>
+                        <td>Normal</td>
+                        <td>Campus I</td>
+                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalVerRecursos">Vizualizar</button></td>
+                        <td>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SALA 13</td>
+                        <td>26</td>
+                        <td>Normal</td>
+                        <td>Campus I</td>
+                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalVerRecursos">Vizualizar</button></td>
+                        <td>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SALA 13</td>
+                        <td>26</td>
+                        <td>Normal</td>
+                        <td>Campus I</td>
+                        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalVerRecursos">Vizualizar</button></td>
+                        <td>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+        </div>
+        <div class="barra">Desenvolvido por Fábrica de Software CEFET-RJ</div>
+        <!-- MODAL VER RECURSOS -->
+            <div class="modal fade" id="modalVerRecursos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Recursos da Sala</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <!-- <button type="button" id="submit-recurso" class="btn btn-primary">Inserir Recurso</button> -->
+                    </div>
+                    </div>
+                </div>
+            </div>
+        <!-- FIM MODAL VER RECURSOS -->
+
+        <!-- MODAL EDITAR -->
+            <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Editar Sala</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="nome-sala">Nome</label>
+                                    <input type="text" class="form-control" id="nome-sala" name="nome-sala">
+                                </div>
+                                <div class="form-group">
+                                    <label for="capacidade">Capacidade</label>
+                                    <input type="number" class="form-control" id="capacidade" name="capacidade">
+                                </div>
+                                <div class="form-group">
+                                    <label for="local">Local</label>
+                                    <input type="text" class="form-control" id="local" name="local" placeholder="Campus I, Campus II...">
+                                </div>
+                                <div class="form-group">
+                                    <label for="tipo">Tipo</label>
+                                    <select class="form-control" id="tipo">
+                                        <option selected>Escolher...</option>
+                                        <option>Laboratório</option>
+                                        <option>Sala Normal</option>
+                                    </select>
+                                </div>
+                            </form>
+                            <label for="#">Recursos</label><br>
+                            <div class="form-group" id="recursos">
+                                <div class="col" id="col1">
+                                    <div class="chiller_cb">
+                                        <input id="check-internet" name="check-internet" type="checkbox">
+                                        <label for="check-internet">Acesso à Internet</label>
+                                        <span></span>
+                                    </div>
+                                    <div class="chiller_cb">
+                                        <input id="check-quadro" type="checkbox">
+                                        <label for="check-quadro">Quadro Branco</label>
+                                        <span></span>
+                                    </div>
+                                    <div class="chiller_cb">
+                                        <input id="check-projetor" type="checkbox">
+                                        <label for="check-projetor">Projetor</label>
+                                        <span></span>
+                                    </div>
+                                    <div class="chiller_cb">
+                                        <input id="check-computador" type="checkbox">
+                                        <label for="check-computador">Computador</label>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <button type="button" id="submit-recurso" class="btn btn-primary">Salvar Alteração</button>
+                        </div>
+                        </div>
+                    </div>
+            </div>
+        <!-- FIM MODAL EDITAR -->
+
+        <!-- MODAL EXCLUI -->
+        <div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Confirmar Exclusão</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Excluir Sala 13 ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" id="submit-recurso" class="btn btn-primary">Confirmar</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+</body>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script>
+    function ola(){
+        console.log("Ola!");    
+    }
+</script>
+</html>
