@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/registro-sala.css">
+    <link rel="stylesheet" href="css/registro-atv.css">
 </head>
 <body>
     <header>
@@ -64,73 +64,35 @@
             </nav>
     </header>
     <div class="container">
-        <h4>Registro de Salas</h4>
+        <h4>Registro de Atividades</h4>
         <div class="bord"></div>
+        <!-- <div class="erro">Dados inseridos Incorretos!</div> -->
         <form method="POST" action="#">
             <div class="form-group">
-              <label for="nome-sala">Nome</label>
-              <input type="text" class="form-control" id="nome-sala" name="nome-sala">
+              <label for="nome-user">Nome</label>
+              <input type="text" class="form-control" id="nome-user" name="nome-user">
             </div>
             <div class="form-group">
-              <label for="capacidade">Capacidade</label>
-              <input type="number" class="form-control" id="capacidade" name="capacidade">
+              <label for="email-user">Tipo</label>
+              <input type="text" class="form-control" id="email-user" name="email-user">
             </div>
-            <div class="form-group">
-              <label for="local">Local</label>
-              <input type="text" class="form-control" id="local" name="local" placeholder="Campus I, Campus II...">
-            </div>
-            <div class="form-group">
-                <label for="tipo">Tipo</label>
-                <select class="form-control" id="tipo">
-                  <option selected>Escolher...</option>
-                  <option>Laboratório</option>
-                  <option>Sala Normal</option>
+            <label for="email-user">Curso Associado</label>
+            <div class="input-group mb-3">
+                
+                <select class="custom-select">
+                    <option selected>Escolher...</option>
+                    <option value="1">Engenharia Elétrica</option>
+                    <option value="2">Física</option>
+                    <option value="3">Gestão do Turismo</option>
+                    <option value="4">Sistemas de Informação</option>
                 </select>
             </div>
-            
-            <label for="#">Recursos</label><br>
-            <div class="form-group" id="recursos">
-                <div class="col" id="col1">
-                    <div class="chiller_cb">
-                        <input id="check-internet" name="check-internet" type="checkbox">
-                        <label for="check-internet">Acesso à Internet</label>
-                        <span></span>
-                    </div>
-                    <div class="chiller_cb">
-                        <input id="check-quadro" type="checkbox">
-                        <label for="check-quadro">Quadro Branco</label>
-                        <span></span>
-                    </div>
-                    <div class="chiller_cb">
-                        <input id="check-projetor" type="checkbox">
-                        <label for="check-projetor">Projetor</label>
-                        <span></span>
-                    </div>
-                    <div class="chiller_cb">
-                        <input id="check-computador" type="checkbox">
-                        <label for="check-computador">Computador</label>
-                        <span></span>
-                    </div>
-                </div>
-                <div class="col" id="col2">
-                        
-                </div>
-                <div class="col" id="col3">
-                        
-                </div>
-                <div class="col" id="col4">
-                        
-                </div>
-                <button type="button" class="btn btn-primary mt-2" id="btn-add-recurso"data-toggle="modal" data-target="#modalAddRecurso">
-                    Adicionar Recurso
-                </button>
-            </div>
             <div class="buttons">
-                    <button type="submit" class="btn btn-primary mb-2" id="btn-save">Salvar</button>
-                    <button type="reset" class="btn btn-light mb-2" id="btn-reset">Cancelar</button>
+                <button type="submit" class="btn btn-primary mb-2" id="btn-save">Salvar Registro</button>
+                <button type="reset" class="btn btn-light mb-2" id="btn-reset">Cancelar</button>
             </div>
-            
           </form>
+
 
     </div>
     <!-- MODAIS -->

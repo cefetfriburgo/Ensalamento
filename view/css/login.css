@@ -24,6 +24,9 @@ body h1{
     border-radius: 12px;
     height: 400px;
 }
+.nav-item{
+    margin-left:2%;
+}
 .container h2{
     color:#888;
     font-size: 30px;

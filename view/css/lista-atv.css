@@ -1,3 +1,6 @@
+
+
+
 .container{
     border:1px solid #ccc;
     margin:2% auto;
@@ -44,4 +47,16 @@
     text-align: center;
     background-color: #333;
     color:#ccc;
+}
+.erro{
+    position: relative;
+    top:10px;
+    border:1px solid rgb(223, 108, 108);
+    padding:6px;
+    box-shadow: 0 0 10px #00000070;
+    background: rgb(223, 108, 108);
+    color:#eee;
+    width: 60%;
+    margin:0 auto;
+    text-align: center;
 }
