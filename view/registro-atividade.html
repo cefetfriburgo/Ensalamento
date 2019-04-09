@@ -1,19 +1,211 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
 <!DOCTYPE html>
-<html>
+<html >
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Enslamento</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/css/bootstrap.min.css">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Sidebar template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/side-bar.css">
     <link rel="stylesheet" href="css/registro-atv.css">
+ 
+
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="page-wrapper chiller-theme toggled">
+  <a id="show-sidebar" class="btn btn-sm btn-dark mt-5" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <!-- MENU LATERAL -->
+  <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div class="sidebar-brand">
+        <a href="#">Reserva de Salas</a>
+        <div id="close-sidebar">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <!-- <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" -->
+            <!-- alt="User picture"> -->
+        </div>
+        <div class="user-info">
+            
+          <span class="user-name">Jhon
+            <strong>Smith</strong>
+          </span>
+          <span class="user-role">Administrator</span>
+          <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span>Online</span>
+          </span>
+        </div>
+      </div>
+      <!-- sidebar-header  -->
+      <!-- <div class="sidebar-search">
+        <div>
+          <div class="input-group">
+            <input type="text" class="form-control search-menu" placeholder="Search...">
+            <div class="input-group-append">
+              <span class="input-group-text">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- sidebar-search  -->
+      <div class="sidebar-menu">
+        <ul>
+          <li class="header-menu">
+            <span>General</span>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+                    <i class="fas fa-clipboard"></i>
+              <span>Salas</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a onclick="bread('Registrar Sala')" href="registro-sala.html">Registrar Salas</a>
+                </li>
+                <li>
+                    <a onclick="bread('Listar Sala')" href="lista-sala.html">Listar Salas</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+                <i class="fas fa-tasks"></i>
+              <span>Atividades</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a onclick="bread('Registrar Atv.')" href="registro-atividade.html">Registrar Atividade
+
+                  </a>
+                </li>
+                <li>
+                  <a onclick="bread('Listar Atv.')" href="lista-atividade.html">Listar Atividades</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+                <i class="far fa-user"></i>
+              <span>Usuários</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a onclick="bread('Registrar Usuário')" href="registro-user.html">Registrar Usuário</a>
+                </li>
+                <li>
+                  <a onclick="bread('Listar Usuário')" href="lista-user.html">Listar Usuários</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-chart-line"></i>
+              <span>Charts</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Pie chart</a>
+                </li>
+                <li>
+                  <a href="#">Line chart</a>
+                </li>
+                <li>
+                  <a href="#">Bar chart</a>
+                </li>
+                <li>
+                  <a href="#">Histogram</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-globe"></i>
+              <span>Maps</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Google maps</a>
+                </li>
+                <li>
+                  <a href="#">Open street map</a>
+                </li>
+              </ul>
+            </div>
+          </li> -->
+          <li class="header-menu">
+            <span>Extra</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-book"></i>
+              <span>Documentos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-calendar"></i>
+              <span>Calendário</span>
+            </a>
+          </li>
+          <!-- <li>
+            <a href="#">
+              <i class="fa fa-folder"></i>
+              <span>Examples</span>
+            </a>
+          </li> -->
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    <div class="sidebar-footer">
+      <a href="#">
+        <i class="fa fa-bell"></i>
+        <span class="badge badge-pill badge-warning notification">3</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-envelope"></i>
+        <span class="badge badge-pill badge-success notification">7</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-cog"></i>
+        <span class="badge-sonar"></span>
+      </a>
+      <a href="#">
+        <i class="fa fa-power-off"></i>
+      </a>
+    </div>
+  </nav>
+  <!-- sidebar-wrapper  -->
+   <!-- INÍCIO HEADER  -->
+   <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="home.html">Sistema de reserva de salas</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
                     <span class="navbar-toggler-icon"></span>
@@ -22,7 +214,7 @@
                 <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
                     <ul class="navbar-nav ml-auto mr-5">
                         
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="drop-sala" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   Salas
@@ -39,20 +231,23 @@
                                   Usuários
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="drop-user">
-                                  <a class="dropdown-item" href="registro-user.html">Registrar Sala</a>
-                                  <a class="dropdown-item" href="lista-user.html  ">Listar Sala</a>
+                                  <a class="dropdown-item" href="registro-user.html">Registrar Usuários</a>
+                                  <a class="dropdown-item" href="lista-user.html  ">Listar Usuários</a>
                                 </div>
                               </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="drop-atv" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Atividades
-                              </button>
-                            <div class="dropdown-menu" aria-labelledby="drop-atv">
-                                <a class="dropdown-item" href="registro-atividade.html">Registrar Atividade</a>
-                                <a class="dropdown-item" href="lista-atividade.html">Listar Atividade</a>
-                            </div>
-                        </li>
+                          <div class="dropdown">
+                              <button class="btn btn-secondary dropdown-toggle" type="button" id="drop-atv" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Atividades
+                                </button>
+                              <div class="dropdown-menu" aria-labelledby="drop-atv">
+                                  <a class="dropdown-item" href="registro-atividade.html">Registrar Atividade</a>
+                                  <a class="dropdown-item" href="lista-atividade.html">Listar Atividade</a>
+                              </div>
+                          </div>
+                            
+                        </li> -->
                         <li class="nav-item active">
                             <a class="nav-link" href="home.html">Home <span class="sr-only">(página atual)</span></a>
                         </li>
@@ -63,97 +258,90 @@
                 </div>
             </nav>
     </header>
-    <div class="container">
-        <h4>Registro de Atividades</h4>
-        <div class="bord"></div>
-        <!-- <div class="erro">Dados inseridos Incorretos!</div> -->
-        <form method="POST" action="#">
-            <div class="form-group">
-              <label for="nome-user">Nome</label>
-              <input type="text" class="form-control" id="nome-user" name="nome-user">
-            </div>
-            <div class="form-group">
-              <label for="email-user">Tipo</label>
-              <input type="text" class="form-control" id="email-user" name="email-user">
-            </div>
-            <label for="email-user">Curso Associado</label>
-            <div class="input-group mb-3">
-                
-                <select class="custom-select">
-                    <option selected>Escolher...</option>
-                    <option value="1">Engenharia Elétrica</option>
-                    <option value="2">Física</option>
-                    <option value="3">Gestão do Turismo</option>
-                    <option value="4">Sistemas de Informação</option>
-                </select>
-            </div>
-            <div class="buttons">
-                <button type="submit" class="btn btn-primary mb-2" id="btn-save">Salvar Registro</button>
-                <button type="reset" class="btn btn-light mb-2" id="btn-reset">Cancelar</button>
-            </div>
-          </form>
-
-
-    </div>
-    <!-- MODAIS -->
-    <div class="modal fade" id="modalAddRecurso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Adicionar Recurso à Sala</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                    <label for="nome-recurso">Recurso: </label>
-                       <input type="text" id="nome-recurso" name="nome-recurso">
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" id="close-modal" data-dismiss="modal">Fechar</button>
-                  <button type="button" id="submit-recurso" onclick="addRecurso()" class="btn btn-primary">Inserir Recurso</button>
-                </div>
+    <!-- FIM HEADER -->
+  <main class="page-content">
+    <div class="container-fluid">
+        <nav aria-label="breadcrumb w-80">
+            <ol class="breadcrumb" id="meu-breadcrumb">
+              <li class="breadcrumb-item active" aria-current="page">Home</li>
+            </ol>
+          </nav>
+      <div class="container">
+          <!-- INÍCIO SEÇÃO DE REGISTRO -->
+          <h4>Registro de Atividades</h4>
+          <div class="bord"></div>
+          <!-- <div class="erro">Dados inseridos Incorretos!</div> -->
+          <form method="POST" action="#">
+              <div class="form-group">
+                <label for="nome-user">Nome</label>
+                <input type="text" class="form-control" id="nome-user" name="nome-user">
               </div>
-            </div>
-          </div>
-    <!-- FIM MODAIS -->
-    <div class="barra">Desenvolvido por Fábrica de Software CEFET-RJ</div>
+              <div class="form-group">
+                <label for="email-user">Tipo</label>
+                <input type="text" class="form-control" id="email-user" name="email-user">
+              </div>
+              <label for="email-user">Curso Associado</label>
+              <div class="input-group mb-3">
+                  
+                  <select class="custom-select">
+                      <option selected>Escolher...</option>
+                      <option value="1">Engenharia Elétrica</option>
+                      <option value="2">Física</option>
+                      <option value="3">Gestão do Turismo</option>
+                      <option value="4">Sistemas de Informação</option>
+                  </select>
+              </div>
+              <div class="buttons">
+                  <button type="submit" class="btn btn-primary mb-2" id="btn-save">Salvar Registro</button>
+                  <button type="reset" class="btn btn-light mb-2" id="btn-reset">Cancelar</button>
+              </div>
+          </form>
+          <!-- FIM SEÇÃO DE REGISTRO -->
+      </div>
+    </div>
+    <!-- <div class="barra">Desenvolvido por Fábrica de Software CEFET-RJ</div> -->
+  </main>
+  <!-- page-content" -->
+</div>
+<!-- page-wrapper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script src="js/breadcrumb.js"></script>
+    
 </body>
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="bootstrap/js/bootstrap.js"></script>
-<script>
-  var qtdRecursos;
-function addRecurso(){
-    pegarqtd();
-    var name_recurso = document.getElementById("nome-recurso").value;
-    var col;
-    if(qtdRecursos < 6){
-      col = document.getElementById("col1");
-    }
-    else{
-      if(qtdRecursos < 12){
-        col = document.getElementById("col2");
-      }
-      else{
-        if(qtdRecursos < 18){
-          col = document.getElementById("col3");
-        }
-        else{
-          col = document.getElementById("col4");
-        }
-      }
-    }
-    var subName = name_recurso.substring(0, 5);
-    col.innerHTML += '<div class="chiller_cb"><input id="check-'+subName+'" type="checkbox"><label for="check-'+subName+'">'+name_recurso+'</label><span></span></div>';
-    // alert("Recurso Adicionado com Sucesso !");
-    document.getElementById("close-modal").click();               
-}
 
-  
-    function pegarqtd(){
-      var qtd = $(".chiller_cb");
-      qtdRecursos = qtd.length;
-      console.log(qtd.length);
-    }
-</script>
 </html>
+<script>
+
+    $(document).ready(function(){
+      $("#meu-breadcrumb").append(localStorage.getItem('bread'));
+      var url_atual = window.location.href;
+    })
+
+    jQuery(function ($) {
+
+        $(".sidebar-dropdown > a").click(function() {
+            $(".sidebar-submenu").slideUp(200);
+            if ($(this).parent().hasClass("active")) {
+                $(".sidebar-dropdown").removeClass("active");
+                $(this).parent().removeClass("active");
+            }
+            else {
+                $(".sidebar-dropdown").removeClass("active");
+                $(this).next(".sidebar-submenu").slideDown(200);
+                $(this) .parent().addClass("active");
+            }
+        });
+
+        $("#close-sidebar").click(function() {
+            $(".page-wrapper").removeClass("toggled");
+        });
+        $("#show-sidebar").click(function() {
+            $(".page-wrapper").addClass("toggled");
+        });
+
+});
+</script>

@@ -1,9 +1,16 @@
 
 
-
+.dashboard{
+    display: flex;
+    flex-wrap: wrap;
+}
+.dropdown-toggle{
+    width: 100%;
+ }
 .container{
     border:1px solid #ccc;
-    margin:2% auto;
+    background: #f4f4f4;
+
 }
 .container h4{
     font-weight: 300;

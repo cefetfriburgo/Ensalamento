@@ -1,6 +1,18 @@
+ /* MENU LATERAL */
+ 
+ .dashboard{
+    display: flex;
+    flex-wrap: wrap;
+}
+.dropdown-toggle{
+    width: 100%;
+ }
+ 
+ /* FIM MENU LATERAL */
 .container{
     border:1px solid #ccc;
-    margin:2% auto;
+    background: #f4f4f4;
+
 }
 .nav-item{
     margin-left:2%;

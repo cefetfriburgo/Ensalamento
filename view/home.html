@@ -1,19 +1,211 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
 <!DOCTYPE html>
-<html>
+<html >
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ensalamento</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/css/bootstrap.min.css">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Sidebar template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/side-bar.css">
     <link rel="stylesheet" href="css/style.css">
+ 
+
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="page-wrapper chiller-theme toggled">
+  <a id="show-sidebar" class="btn btn-sm btn-dark mt-5" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <!-- MENU LATERAL -->
+  <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div class="sidebar-brand">
+        <a href="home.html">Reserva de Salas</a>
+        <div id="close-sidebar">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <!-- <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" -->
+            <!-- alt="User picture"> -->
+        </div>
+        <div class="user-info">
+            
+          <span class="user-name">Jhon
+            <strong>Smith</strong>
+          </span>
+          <span class="user-role">Administrator</span>
+          <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span>Online</span>
+          </span>
+        </div>
+      </div>
+      <!-- sidebar-header  -->
+      <!-- <div class="sidebar-search">
+        <div>
+          <div class="input-group">
+            <input type="text" class="form-control search-menu" placeholder="Search...">
+            <div class="input-group-append">
+              <span class="input-group-text">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- sidebar-search  -->
+      <div class="sidebar-menu">
+        <ul>
+          <li class="header-menu">
+            <span>General</span>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+                    <i class="fas fa-clipboard"></i>
+              <span>Salas</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a  onclick="bread('Registrar Sala')" href="registro-sala.html">Registrar Salas</a>
+                </li>
+                <li>
+                    <a onclick="bread('Listar Sala')"href="lista-sala.html">Listar Salas</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+                <i class="fas fa-tasks"></i>
+              <span>Atividades</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a onclick="bread('Registrar Atv.')" href="registro-atividade.html">Registrar Atividade
+
+                  </a>
+                </li>
+                <li>
+                  <a onclick="bread('Listar Atv.')" href="lista-atividade.html">Listar Atividades</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+                <i class="far fa-user"></i>
+              <span>Usuários</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a onclick="bread('Registrar Usuário')" href="registro-user.html">Registrar Usuário</a>
+                </li>
+                <li>
+                  <a onclick="bread('Listar Usuário')" href="lista-user.html">Listar Usuários</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-chart-line"></i>
+              <span>Charts</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Pie chart</a>
+                </li>
+                <li>
+                  <a href="#">Line chart</a>
+                </li>
+                <li>
+                  <a href="#">Bar chart</a>
+                </li>
+                <li>
+                  <a href="#">Histogram</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-globe"></i>
+              <span>Maps</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Google maps</a>
+                </li>
+                <li>
+                  <a href="#">Open street map</a>
+                </li>
+              </ul>
+            </div>
+          </li> -->
+          <li class="header-menu">
+            <span>Extra</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-book"></i>
+              <span>Documentos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-calendar"></i>
+              <span>Calendário</span>
+            </a>
+          </li>
+          <!-- <li>
+            <a href="#">
+              <i class="fa fa-folder"></i>
+              <span>Examples</span>
+            </a>
+          </li> -->
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    <div class="sidebar-footer">
+      <a href="#">
+        <i class="fa fa-bell"></i>
+        <span class="badge badge-pill badge-warning notification">3</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-envelope"></i>
+        <span class="badge badge-pill badge-success notification">7</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-cog"></i>
+        <span class="badge-sonar"></span>
+      </a>
+      <a href="#">
+        <i class="fa fa-power-off"></i>
+      </a>
+    </div>
+  </nav>
+  <!-- sidebar-wrapper  -->
+   <!-- INÍCIO HEADER  -->
+   <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="home.html">Sistema de reserva de salas</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
                     <span class="navbar-toggler-icon"></span>
@@ -22,7 +214,7 @@
                 <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
                     <ul class="navbar-nav ml-auto mr-5">
                         
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="drop-sala" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   Salas
@@ -39,20 +231,23 @@
                                   Usuários
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="drop-user">
-                                  <a class="dropdown-item" href="registro-user.html">Registrar Sala</a>
-                                  <a class="dropdown-item" href="lista-user.html  ">Listar Sala</a>
+                                  <a class="dropdown-item" href="registro-user.html">Registrar Usuários</a>
+                                  <a class="dropdown-item" href="lista-user.html  ">Listar Usuários</a>
                                 </div>
                               </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="drop-atv" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Atividades
-                              </button>
-                            <div class="dropdown-menu" aria-labelledby="drop-atv">
-                                <a class="dropdown-item" href="registro-atividade.html">Registrar Atividade</a>
-                                <a class="dropdown-item" href="lista-atividade.html">Listar Atividade</a>
-                            </div>
-                        </li>
+                          <div class="dropdown">
+                              <button class="btn btn-secondary dropdown-toggle" type="button" id="drop-atv" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Atividades
+                                </button>
+                              <div class="dropdown-menu" aria-labelledby="drop-atv">
+                                  <a class="dropdown-item" href="registro-atividade.html">Registrar Atividade</a>
+                                  <a class="dropdown-item" href="lista-atividade.html">Listar Atividade</a>
+                              </div>
+                          </div>
+                            
+                        </li> -->
                         <li class="nav-item active">
                             <a class="nav-link" href="home.html">Home <span class="sr-only">(página atual)</span></a>
                         </li>
@@ -63,8 +258,20 @@
                 </div>
             </nav>
     </header>
-        <div class="container">
-            <nav class="navbar navbar-light bg-body mt-2 menu-options">
+    <!-- FIM HEADER -->
+  <main class="page-content">
+    <div class="container-fluid">
+      <!-- BREADECRUMB -->
+        <nav aria-label="breadcrumb w-80 breadcrumb-dark bg-dark">
+            <ol class="breadcrumb" id="meu-breadcrumb">
+              <li class="breadcrumb-item active" aria-current="page">Home</li>
+            </ol>
+          </nav>
+        <!-- FIM BREADCRUMB -->
+      <div class="container">
+          
+          <!-- INÍCIO GRADE DE SALAS -->
+          <nav class="navbar navbar-light bg-body mt-2 menu-options">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <label class="input-group-text" for="inputGroupSelect01">Professor</label>
@@ -112,11 +319,13 @@
                               <div class="carousel-item">
                                     <div class="alert alert-dark menu-sala" role="alert">
                                             LABORATÓRIO INFO 4
-                                        </div>                  </div>
+                                    </div>                  
+                              </div>
                               <div class="carousel-item">
                                     <div class="alert alert-dark menu-sala" role="alert">
                                             LABORATÓRIO INFO 3
-                                        </div>                  </div>
+                                        </div>            
+                              </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -128,7 +337,7 @@
                             </a>
                         </div>
                   <div class="section-calendar">
-                        <table class="table table-hover">
+                        <table class="table table-hover table-light">
                                 <thead>
                                   <tr>
                                     <th scope="col">Horário - Tempo </th>
@@ -368,88 +577,169 @@
                               </table>
                   </div>
             </div>
-        </div>
-        <div class="barra">Desenvolvido por Fábrica de Software CEFET-RJ</div>
-        <a href="lista-sala.html">ls</a>
-        <!-- Modal  RESERVAR-->
-        <div class="modal fade" id="modalExemplo5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Reserva de Sala</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                            <form>
-                                    <div class="form-row">
-                                      <div class="form-group col-md-6">
-                                        <label for="inputEmail4">Hora Inicio</label>
-                                        <input type="text" class="form-control" id="inputEmail4">
-                                      </div>
-                                      <div class="form-group col-md-6">
-                                        <label for="inputPassword4">Hora Fim</label>
-                                        <input type="text" class="form-control" id="inputPassword4">
-                                      </div>
-                                    </div>
-                                    <div class="form-group">
-                                      <label for="inputAddress">Atividade</label>
-                                      <input type="text" class="form-control" id="inputAddress">
-                                    </div>
-                                    <div class="form-group">
-                                      <label for="inputAddress2">Utilizador</label>
-                                      <input type="text" class="form-control" id="inputAddress2">
-                                    </div>
-            
-                                  </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                      <button type="button" class="btn btn-primary">Reservar</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- FIM MODAL RESERVAR -->
-              <!-- Modal OCUPADO-->
-              <div class="modal fade" id="modalExemplo1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Reserva de Sala</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
+            <!-- FIM GRADE DE SALAS -->
+      </div>
+    </div>
+    <!-- <div class="barra">Desenvolvido por Fábrica de Software CEFET-RJ</div> -->
+  </main>
+  <!-- page-content" -->
+  <!-- FIM MODAIS -->
+   <!-- MODAL  RESERVAR-->
+   <div class="modal fade" id="modalExemplo5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Reserva de Sala</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                  <form>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="hora-inicio">Hora Inicio</label>
+                          <input type="time" class="form-control" id="hora-inicio">
                         </div>
-                        <div class="modal-body m-auto">
-                          <table>
-                              <tr>
-                                  <th scope="row">Motivo:</th>
-                                  <td style="padding:10px;">Monitoria de Prog. Estruturada</td>
-                                  
-                              </tr>
-                              <tr>
-                                <th scope="row">Professor(a):</th>
-                                <td style="padding:10px;"> Rodrigo Reis G</td>
-                              </tr>
-                          </table>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <div class="form-group col-md-6">
+                          <label for="hora-fim">Hora Fim</label>
+                          <input type="time" class="form-control" id="hora-fim">
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="input-group">Atividade</label>
+                          <div class="input-group" id="input-group">
+                            <input type="text" id="tipo-atv" aria-label="First name" class="form-control" placeholder="Tipo">
+                            <input type="text" id="nome-atv" aria-label="Last name" class="form-control" placeholder="Nome">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputAddress2">Utilizador</label>
+                        <input type="text" class="form-control" id="inputAddress2">
+                      </div>
+                    </form>
+                      
+                      <button type="button" class="btn btn-primary mt-2" id="personalizar" data-toggle="modal" data-target="#modalExemplo2">Repetir</button>
                     </div>
-                  </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary">Reservar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIM MODAL RESERVAR -->
+
+    <!-- MODAL OCUPADO-->
+    <div class="modal fade" id="modalExemplo1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Reserva de Sala</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body m-auto">
+              <table>
+                  <tr>
+                      <th scope="row">Motivo:</th>
+                      <td style="padding:10px;">Monitoria de Prog. Estruturada</td>
+                      
+                  </tr>
+                  <tr>
+                    <th scope="row">Professor(a):</th>
+                    <td style="padding:10px;"> Rodrigo Reis G</td>
+                  </tr>
+              </table>
+            </div>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            <div class="modal-footer" style="background:#fff;">
+              
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- FIM MODAL OCUPADO -->
+
+    <!-- MODAL OCORRÊNCIA PERSONALIZADA-->
+    <div class="modal fade" id="modalExemplo2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-right:19px;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Reserva de Sala</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" >
+                    <label for="dias">Repetir a cada: </label><input type="number" id="dias" placeholder="1">
+                      <select id="pers-ocorrencias">
+                        <option selected>dias</option>
+                        <option>semanas</option>
+                        <option>meses</option>
+                      </select>
+                      <br><br>
+                      <label for="radio-termino">Termina em</label>
+                      <div class="custom-control custom-radio">
+                        <input type="radio" id="radio-nunca" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="radio-nunca">Nunca</label>
+                      </div>
+                      <br>
+                      <div class="custom-control custom-radio">
+                        <input type="radio" id="radio-em" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="radio-em">Em</label>
+                      </div>
+                      <br>
+                      <div class="custom-control custom-radio">
+                        <input type="radio" id="radio-apos" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="radio-apos">Após</label><input type="number" id="dias-term" placeholder="1"><div id="ocor" style="display: inline">ocorrencias</div>
+                      </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIM MODAL OCORRÊNCIA PERSONALIZADA -->
+</div>
+<!-- page-wrapper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script src="js/breadcrumb.js"></script>
+    
 </body>
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="bootstrap/js/bootstrap.js"></script>
-<script>
-    $(document).ready(function(){
-        $('.carousel').carousel({
-            pause: true,
-            interval: false
-        });
-    })
-</script>
+
 </html>
+<script>
+    
+    jQuery(function ($) {
+
+        $(".sidebar-dropdown > a").click(function() {
+            $(".sidebar-submenu").slideUp(200);
+            if ($(this).parent().hasClass("active")) {
+                $(".sidebar-dropdown").removeClass("active");
+                $(this).parent().removeClass("active");
+            }
+            else {
+                $(".sidebar-dropdown").removeClass("active");
+                $(this).next(".sidebar-submenu").slideDown(200);
+                $(this) .parent().addClass("active");
+            }
+        });
+
+        $("#close-sidebar").click(function() {
+            $(".page-wrapper").removeClass("toggled");
+        });
+        $("#show-sidebar").click(function() {
+            $(".page-wrapper").addClass("toggled");
+        });
+
+});
+</script>
