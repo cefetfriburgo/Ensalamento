@@ -1,8 +1,3 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
 <!DOCTYPE html>
 <html >
 <head>
@@ -10,10 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
-    <title>Sidebar template</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <title>SRS - CEFET</title>
+    <!-- BOOSTRAP -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/side-bar.css">
     <link rel="stylesheet" href="css/lista-atv.css">
  
@@ -34,11 +33,8 @@
           <i class="fas fa-times"></i>
         </div>
       </div>
+      <!-- SIDE-BAR HEADER -->
       <div class="sidebar-header">
-        <div class="user-pic">
-          <!-- <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" -->
-            <!-- alt="User picture"> -->
-        </div>
         <div class="user-info">
             
           <span class="user-name">Jhon
@@ -51,24 +47,19 @@
           </span>
         </div>
       </div>
-      <!-- sidebar-header  -->
-      <!-- <div class="sidebar-search">
-        <div>
-          <div class="input-group">
-            <input type="text" class="form-control search-menu" placeholder="Search...">
-            <div class="input-group-append">
-              <span class="input-group-text">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <!-- sidebar-search  -->
+      <!-- FIM SIDE-BAR HEADER -->
+
+      <!-- SIDE-BAR MENU -->
       <div class="sidebar-menu">
         <ul>
           <li class="header-menu">
             <span>General</span>
+          </li>
+          <li>
+            <a href="home.html">
+                <i class="far fa-folder-open"></i>
+              <span>Home</span>
+            </a>
           </li>
           <li class="sidebar-dropdown">
             <a href="#">
@@ -120,44 +111,6 @@
               </ul>
             </div>
           </li>
-          <!-- <li class="sidebar-dropdown">
-            <a href="#">
-              <i class="fa fa-chart-line"></i>
-              <span>Charts</span>
-            </a>
-            <div class="sidebar-submenu">
-              <ul>
-                <li>
-                  <a href="#">Pie chart</a>
-                </li>
-                <li>
-                  <a href="#">Line chart</a>
-                </li>
-                <li>
-                  <a href="#">Bar chart</a>
-                </li>
-                <li>
-                  <a href="#">Histogram</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="sidebar-dropdown">
-            <a href="#">
-              <i class="fa fa-globe"></i>
-              <span>Maps</span>
-            </a>
-            <div class="sidebar-submenu">
-              <ul>
-                <li>
-                  <a href="#">Google maps</a>
-                </li>
-                <li>
-                  <a href="#">Open street map</a>
-                </li>
-              </ul>
-            </div>
-          </li> -->
           <li class="header-menu">
             <span>Extra</span>
           </li>
@@ -173,17 +126,11 @@
               <span>Calendário</span>
             </a>
           </li>
-          <!-- <li>
-            <a href="#">
-              <i class="fa fa-folder"></i>
-              <span>Examples</span>
-            </a>
-          </li> -->
         </ul>
       </div>
-      <!-- sidebar-menu  -->
+      <!-- FIM SIDE-BAR MENU  -->
     </div>
-    <!-- sidebar-content  -->
+    <!-- SIDE-BAR FOOTER -->
     <div class="sidebar-footer">
       <a href="#">
         <i class="fa fa-bell"></i>
@@ -201,8 +148,10 @@
         <i class="fa fa-power-off"></i>
       </a>
     </div>
+    <!-- FIM SIDE-BAR FOOTER -->
   </nav>
-  <!-- sidebar-wrapper  -->
+
+   <!-- --------------------------------------- PÁGINA CONTEÚDO------------------------------------------ -->
    <!-- INÍCIO HEADER  -->
    <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -210,44 +159,8 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
                 <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
                     <ul class="navbar-nav ml-auto mr-5">
-                        
-                        <!-- <li class="nav-item">
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="drop-sala" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Salas
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="drop-sala">
-                                  <a class="dropdown-item" href="registro-sala.html">Registrar Sala</a>
-                                  <a class="dropdown-item" href="lista-sala.html  ">Listar Sala</a>
-                                </div>
-                              </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="drop-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Usuários
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="drop-user">
-                                  <a class="dropdown-item" href="registro-user.html">Registrar Usuários</a>
-                                  <a class="dropdown-item" href="lista-user.html  ">Listar Usuários</a>
-                                </div>
-                              </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <div class="dropdown">
-                              <button class="btn btn-secondary dropdown-toggle" type="button" id="drop-atv" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Atividades
-                                </button>
-                              <div class="dropdown-menu" aria-labelledby="drop-atv">
-                                  <a class="dropdown-item" href="registro-atividade.html">Registrar Atividade</a>
-                                  <a class="dropdown-item" href="lista-atividade.html">Listar Atividade</a>
-                              </div>
-                          </div>
-                            
-                        </li> -->
                         <li class="nav-item active">
                             <a class="nav-link" href="home.html">Home <span class="sr-only">(página atual)</span></a>
                         </li>
@@ -259,6 +172,7 @@
             </nav>
     </header>
     <!-- FIM HEADER -->
+    <!-- PÁGINA CONTENT -->
   <main class="page-content">
     <div class="container-fluid">
         <nav aria-label="breadcrumb w-80">
@@ -364,9 +278,10 @@
          <!-- FIM SEÇÃO DE LISTAGEM -->
       </div>
     </div>
-    <!-- <div class="barra">Desenvolvido por Fábrica de Software CEFET-RJ</div> -->
   </main>
-  <!-- page-content" -->
+  <!-- FIM PÁGINA CONTENT  -->
+  <!-- ---------------------------------------------------- --FIM PÁGINA CONTEÚDO ------------------------------------------------------- -->
+
   <!-- MODAL VER INFORMAÇÕES DA ATIVIDADE -->
   <div class="modal fade" id="modalView" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -400,16 +315,10 @@
                         <th scope="row" style="padding:10px;">Curso: </th>
                         <td style="padding:10px;">Sistemas de Informação</td>
                     </tr>
-                    <!-- <tr>
-                        <th scope="row" style="padding:10px;">Término: </th>
-                        <td style="padding:10px;">16:40</td>
-                    </tr> -->
                 </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                <!-- <button type="button" id="submit-recurso" class="btn btn-primary">Inserir Recurso</button> -->
-            </div>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>            </div>
             </div>
         </div>
     </div>
@@ -447,10 +356,6 @@
                                     <option value="4">Sistemas de Informação</option>
                                 </select>
                             </div>
-                            <!-- <div class="buttons">
-                                <button type="submit" class="btn btn-primary mb-2" id="btn-save">Salvar Registro</button>
-                                <button type="reset" class="btn btn-light mb-2" id="btn-reset">Cancelar</button>
-                            </div> -->
                           </form>
                 </div>
                 <div class="modal-footer">
@@ -481,13 +386,10 @@
     </div>
    
 </div>
-<!-- page-wrapper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-        <script src="js/breadcrumb.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/breadcrumb.js"></script>
     
 </body>
 

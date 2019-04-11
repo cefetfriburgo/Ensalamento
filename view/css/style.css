@@ -82,6 +82,39 @@
 #input-group{
     width: 100%;
 }
+.filter{
+    width: 97.5%;
+    /* border:1px solid red; */
+    text-align: right;
+}
+.filter button{
+    margin:0 auto;
+    border:1px solid #eee;
+    background:#fff;
+}
+.filter .search{
+    text-align: center;
+    margin-right: 14%;
+}
+.search{
+    margin:0 auto;
+    width: 50%;
+    border:0;
+    margin-bottom: 3%;
+    display: inline-block;
+    /* border:1px solid red; */
+}
+#search-sala{
+    width: 80%;
+    border:0;
+    border-bottom: 1px solid #aaa;
+    padding:5px;
+    background:#F4F4F4;
+}
+.fa-search{
+    cursor: pointer;
+    font-size: 18px;
+}
 .barra{
     margin-top: 1%;
     text-align: center;

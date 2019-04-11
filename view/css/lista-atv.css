@@ -37,7 +37,7 @@
 }
 .search{
     margin:0 auto;
-    width: 30%;
+    width: 40%;
     border:0;
     margin-bottom: 3%;
 }
@@ -45,9 +45,12 @@
     width: 80%;
     border:0;
     border-bottom: 1px solid #aaa;
+    padding:5px;
+    background:#F4F4F4;
 }
 .fa-search{
     cursor: pointer;
+    font-size: 18px;
 }
 .barra{
     margin-top: 1%;

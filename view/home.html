@@ -1,8 +1,3 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
 <!DOCTYPE html>
 <html >
 <head>
@@ -10,10 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
-    <title>Sidebar template</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <title>SRS - CEFET</title>
+    <!-- BOOTSTRAP -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/side-bar.css">
     <link rel="stylesheet" href="css/style.css">
  
@@ -34,11 +33,10 @@
           <i class="fas fa-times"></i>
         </div>
       </div>
+
+      <!-- SIDE-BAR HEADER  -->
       <div class="sidebar-header">
-        <div class="user-pic">
-          <!-- <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" -->
-            <!-- alt="User picture"> -->
-        </div>
+
         <div class="user-info">
             
           <span class="user-name">Jhon
@@ -51,28 +49,23 @@
           </span>
         </div>
       </div>
-      <!-- sidebar-header  -->
-      <!-- <div class="sidebar-search">
-        <div>
-          <div class="input-group">
-            <input type="text" class="form-control search-menu" placeholder="Search...">
-            <div class="input-group-append">
-              <span class="input-group-text">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <!-- sidebar-search  -->
+      <!-- FIM SIDE-BAR HEADER -->
+
+      <!-- SIDE-BAR MENU -->
       <div class="sidebar-menu">
         <ul>
           <li class="header-menu">
             <span>General</span>
           </li>
+          <li>
+              <a href="home.html">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+              </a>
+            </li>
           <li class="sidebar-dropdown">
             <a href="#">
-                    <i class="fas fa-clipboard"></i>
+                <i class="far fa-folder-open"></i>
               <span>Salas</span>
             </a>
             <div class="sidebar-submenu">
@@ -120,44 +113,6 @@
               </ul>
             </div>
           </li>
-          <!-- <li class="sidebar-dropdown">
-            <a href="#">
-              <i class="fa fa-chart-line"></i>
-              <span>Charts</span>
-            </a>
-            <div class="sidebar-submenu">
-              <ul>
-                <li>
-                  <a href="#">Pie chart</a>
-                </li>
-                <li>
-                  <a href="#">Line chart</a>
-                </li>
-                <li>
-                  <a href="#">Bar chart</a>
-                </li>
-                <li>
-                  <a href="#">Histogram</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="sidebar-dropdown">
-            <a href="#">
-              <i class="fa fa-globe"></i>
-              <span>Maps</span>
-            </a>
-            <div class="sidebar-submenu">
-              <ul>
-                <li>
-                  <a href="#">Google maps</a>
-                </li>
-                <li>
-                  <a href="#">Open street map</a>
-                </li>
-              </ul>
-            </div>
-          </li> -->
           <li class="header-menu">
             <span>Extra</span>
           </li>
@@ -169,21 +124,15 @@
           </li>
           <li>
             <a href="#">
-              <i class="fa fa-calendar"></i>
+              <i class="far fa-calendar-alt"></i>
               <span>Calendário</span>
             </a>
           </li>
-          <!-- <li>
-            <a href="#">
-              <i class="fa fa-folder"></i>
-              <span>Examples</span>
-            </a>
-          </li> -->
         </ul>
       </div>
-      <!-- sidebar-menu  -->
+      <!-- FIM SIDE-BAR MENU -->
     </div>
-    <!-- sidebar-content  -->
+    <!-- SIDE-BAR FOOTER  -->
     <div class="sidebar-footer">
       <a href="#">
         <i class="fa fa-bell"></i>
@@ -201,8 +150,9 @@
         <i class="fa fa-power-off"></i>
       </a>
     </div>
+    <!-- FIM SIDE-BAR FOOTER -->
   </nav>
-  <!-- sidebar-wrapper  -->
+   <!-- --------------------------------------- PÁGINA CONTEÚDO------------------------------------------ -->
    <!-- INÍCIO HEADER  -->
    <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -213,41 +163,6 @@
                 
                 <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
                     <ul class="navbar-nav ml-auto mr-5">
-                        
-                        <!-- <li class="nav-item">
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="drop-sala" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Salas
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="drop-sala">
-                                  <a class="dropdown-item" href="registro-sala.html">Registrar Sala</a>
-                                  <a class="dropdown-item" href="lista-sala.html  ">Listar Sala</a>
-                                </div>
-                              </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="drop-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Usuários
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="drop-user">
-                                  <a class="dropdown-item" href="registro-user.html">Registrar Usuários</a>
-                                  <a class="dropdown-item" href="lista-user.html  ">Listar Usuários</a>
-                                </div>
-                              </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <div class="dropdown">
-                              <button class="btn btn-secondary dropdown-toggle" type="button" id="drop-atv" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Atividades
-                                </button>
-                              <div class="dropdown-menu" aria-labelledby="drop-atv">
-                                  <a class="dropdown-item" href="registro-atividade.html">Registrar Atividade</a>
-                                  <a class="dropdown-item" href="lista-atividade.html">Listar Atividade</a>
-                              </div>
-                          </div>
-                            
-                        </li> -->
                         <li class="nav-item active">
                             <a class="nav-link" href="home.html">Home <span class="sr-only">(página atual)</span></a>
                         </li>
@@ -259,6 +174,8 @@
             </nav>
     </header>
     <!-- FIM HEADER -->
+
+    <!-- PÁGINA CONTENT -->
   <main class="page-content">
     <div class="container-fluid">
       <!-- BREADECRUMB -->
@@ -269,47 +186,15 @@
           </nav>
         <!-- FIM BREADCRUMB -->
       <div class="container">
-          
-          <!-- INÍCIO GRADE DE SALAS -->
-          <nav class="navbar navbar-light bg-body mt-2 menu-options">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text" for="inputGroupSelect01">Professor</label>
-                    </div>
-                    <select class="custom-select" id="inputGroupSelect01">
-                        <option selected>Escolher...</option>
-                        <option value="1">Bruno Silva</option>
-                        <option value="2">Thiago Souza</option>
-                        <option value="3">Eliezér Silva</option>
-                    </select>
+            <div class="filter d-inline-block mt-2">
+                <div class="search">
+                    <input type="text" name="search-sala" id="search-sala" placeholder=" Buscar Salas">
+                    <label for="search-sala" id="search-sala-label"><i class="fas fa-search"></i></label>
                 </div>
-
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text" for="inputGroupSelect01">Salas</label>
-                    </div>
-                    <select class="custom-select" id="inputGroupSelect01">
-                        <option selected>Escolher...</option>
-                        <option value="1">Laboratório 1</option>
-                        <option value="2">Laboratório 2</option>
-                        <option value="3">Sala CIEP 15</option>
-                    </select>
-                </div>
-
-                <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">Salas</label>
-                        </div>
-                        <select class="custom-select" id="inputGroupSelect01">
-                            <option selected>Escolher...</option>
-                            <option value="1">Laboratório 1</option>
-                            <option value="2">Laboratório 2</option>
-                            <option value="3">Sala CIEP 15</option>
-                        </select>
-                    </div>
-            </nav>
+                <button type="button" class="btn btn-light mt-2" data-target="#modal-filtro" data-toggle="modal"><i class="fas fa-filter"></i>&nbsp;&nbsp;Filtros</button>
+            </div>
             <div class="section">
-                    <div id="carouselExampleControls" class="carousel slide" >
+                    <div id="carousel-salas" class="carousel slide" >
                             <div class="carousel-inner">
                               <div class="carousel-item active">
                                 <div class="alert alert-dark menu-sala" role="alert">
@@ -327,17 +212,17 @@
                                         </div>            
                               </div>
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <a class="carousel-control-prev" href="#carousel-salas" role="button" data-slide="prev">
                               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                               <span class="sr-only">Anterior</span>
                             </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <a class="carousel-control-next" href="#carousel-salas" role="button" data-slide="next">
                               <span class="carousel-control-next-icon" aria-hidden="true"></span>
                               <span class="sr-only">Próximo</span>
                             </a>
                         </div>
                   <div class="section-calendar">
-                        <table class="table table-hover table-light">
+                        <table class="table table-light table-striped">
                                 <thead>
                                   <tr>
                                     <th scope="col">Horário - Tempo </th>
@@ -580,10 +465,9 @@
             <!-- FIM GRADE DE SALAS -->
       </div>
     </div>
-    <!-- <div class="barra">Desenvolvido por Fábrica de Software CEFET-RJ</div> -->
   </main>
-  <!-- page-content" -->
-  <!-- FIM MODAIS -->
+  <!-- FIM PÁGINA CONTENT -->
+  <!-- ---------------------------------------------------- --FIM PÁGINA CONTEÚDO ------------------------------------------------------- -->
    <!-- MODAL  RESERVAR-->
    <div class="modal fade" id="modalExemplo5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -621,10 +505,10 @@
                       
                       <button type="button" class="btn btn-primary mt-2" id="personalizar" data-toggle="modal" data-target="#modalExemplo2">Repetir</button>
                     </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-            <button type="button" class="btn btn-primary">Reservar</button>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Reservar</button>
+                  </div>
           </div>
         </div>
       </div>
@@ -654,9 +538,9 @@
                   </tr>
               </table>
             </div>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            
             <div class="modal-footer" style="background:#fff;">
-              
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
             </div>
           </div>
         </div>
@@ -705,8 +589,73 @@
       </div>
     </div>
     <!-- FIM MODAL OCORRÊNCIA PERSONALIZADA -->
+    <!-- MODAL FILTROS-->
+    <div class="modal fade" id="modal-filtro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Reserva de Sala</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+              <label for="filtro-prof"><b>Filtrar por Professor</b></label>
+              <select class="custom-select w-40" id="filtro-prof">
+                  <option selected>Escolher...</option>
+                  <option value="1">Bruno Silva</option>
+                  <option value="2">Thiago Souza</option>
+                  <option value="3">Eliezér Silva</option>
+                  <option value="1">Bruno Silva</option>
+                  <option value="2">Thiago Souza</option>
+                  <option value="3">Eliezér Silva</option>
+                  <option value="1">Bruno Silva</option>
+                  <option value="2">Thiago Souza</option>
+                  <option value="3">Eliezér Silva</option>
+                  <option value="1">Bruno Silva</option>
+                  <option value="2">Thiago Souza</option>
+                  <option value="3">Eliezér Silva</option>
+              </select>
+
+              <label class="mt-3" for="filtro-curso"><b>Filtrar por Curso</b></label>
+              <select class="custom-select" id="filtro-prof">
+                <option selected>Escolher...</option>
+                <option value="1">Engenharia Elétrica</option>
+                <option value="2">Física</option>
+                <option value="3">Gestão de Turismo</option>
+                <option value="4">Sistemas de Informações</option>
+            </select>
+
+            <label class="mt-3" for="filtro-curso"><b>Filtrar por Sala</b></label>
+            <select class="custom-select" id="sala-home">
+                <option selected>Escolher...</option>
+                <option value="1">Laboratório 1</option>
+                <option value="2">Laboratório 2</option>
+                <option value="3">Sala CIEP 15</option>
+                <option selected>Escolher...</option>
+                <option value="1">Laboratório 1</option>
+                <option value="2">Laboratório 2</option>
+                <option value="3">Sala CIEP 15</option>
+                <option selected>Escolher...</option>
+                <option value="1">Laboratório 1</option>
+                <option value="2">Laboratório 2</option>
+                <option value="3">Sala CIEP 15</option>
+                <option selected>Escolher...</option>
+                <option value="1">Laboratório 1</option>
+                <option value="2">Laboratório 2</option>
+                <option value="3">Sala CIEP 15</option>
+            </select>
+            </div>
+          <div class="modal-footer" style="background:#fff;">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary">Aplicar</button>
+          </div>
+        </div>
+      </div>
+  </div>
+  <!-- FIM MODAL FILTROS -->
 </div>
-<!-- page-wrapper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
