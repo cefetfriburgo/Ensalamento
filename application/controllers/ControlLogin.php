@@ -19,7 +19,7 @@ class ControlLogin extends CI_Controller{
         $result = $this->db->get("usuario")->result();
         $cont = 0;
         foreach ($result as $key) {
-            if($key->email == $email && $key->senha ==  $senha){
+            if($key->email == $email && $key->senha ==  sha1( $senha )){
                 echo "<script> alert('Login Efetuado!'); </script>";
                 session_start();
 
