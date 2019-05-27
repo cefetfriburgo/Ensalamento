@@ -3,7 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class ControlLogin extends CI_Controller{
 
     public function index(){
-        $this->load->view('login/login');
+        session_start();     
+        if(isset( $_SESSION[ 'logado' ] )){
+            header('Location: index.php/controlHome/');
+        }else { 
+            $this->load->view('login/login'); 
+        }
     }
     public function logar(){
         $email = addslashes( $_POST['email'] );
