@@ -20,6 +20,7 @@ class UsuarioModel extends CI_Model{
         );
         $this->db->insert('usuario', $dados);
         echo '<script>alert(" Usuário Inserido! ");</script>';
+        session_start();
         $this->load->view('usuario/registro-user');
     
     }
