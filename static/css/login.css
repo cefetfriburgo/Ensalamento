@@ -1,0 +1,90 @@
+body{
+    margin:0 auto;
+    padding:0;
+    background: #fff;
+    background-size: cover;
+    text-align: center;
+    font-family: 'Century Gothic',sans-serif;
+}
+body h1{
+    font-weight: 100;
+    color:white;
+    margin-top:2%;
+}
+.container{
+    width:300px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding:20px;
+    background: #eee;
+    box-shadow: 0 0 10px #00000070;
+    text-align: center;
+    border-radius: 12px;
+    height: 400px;
+}
+.nav-item{
+    margin-left:2%;
+}
+.container h2{
+    color:#888;
+    font-size: 30px;
+    font-weight: 200;
+}
+.erro{
+    position: relative;
+    top:10px;
+    border:1px solid rgb(223, 108, 108);
+    padding:6px;
+    box-shadow: 0 0 10px #00000070;
+    background: rgb(223, 108, 108);
+    color:#eee;
+}
+.form{
+    margin:0 auto;
+    text-align: center;
+    position: relative;
+    top:44px;
+}
+.form input[type="email"], input[type="password"]{
+    width: 90%;
+    height:10px;
+    font-size: 15px;
+    padding:15px;
+    margin-top:3%;
+    color:#333;
+    border:1px solid #aaa;
+    /* box-shadow: 0 0 10px #00000070; */
+    border-radius: 5px;
+}
+.form input[type="submit"], input[type="reset"]{
+    margin-top:10%;
+    width:30%;
+    height:42px;
+    /* background: #999;
+    color:#fff;
+    border:1px solid #aaa;
+    font-size: 18px;
+    border-radius: 2px;
+    transition: 0.4s; */
+    cursor: pointer;
+}
+/* .form input[type="submit"]:hover{
+    background: #3498DB;
+    color:#ddd;
+    /* border:2px solid #222; */
+    
+/* } */
+.erro{
+    position: relative;
+    top:10px;
+    border:1px solid rgb(223, 108, 108);
+    padding:6px;
+    box-shadow: 0 0 10px #00000070;
+    background: rgb(223, 108, 108);
+    color:#eee;
+    width: 60%;
+    margin:0 auto;
+    text-align: center;
+}

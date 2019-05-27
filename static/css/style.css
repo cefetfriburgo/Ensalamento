@@ -1,0 +1,124 @@
+
+.dashboard{
+    display: flex;
+    flex-wrap: wrap;
+}
+.dropdown-toggle{
+    width: 100%;
+ }
+.container{
+    border:1px solid #ccc;
+    background: #f4f4f4;
+}
+.menu-options{
+    border:1px solid #eee;
+}
+
+.input-group-text{
+    width: 90px;
+    text-align:left;
+}
+.input-group{
+    width:30%;
+}
+
+.nav-item{
+    margin-left:2%;
+}
+.menu-sala{
+    margin:1% auto;
+    text-align: center;
+    width: 95%;
+}
+
+.table{
+    overflow-y: scroll;
+
+}
+.table td{
+    text-align: left;
+    border:1px solid #ccc;
+    text-align: center;
+    padding:5px;
+    padding:5px 1px 5px 1px;
+}
+.table th{
+    border:1px solid #ccc;
+    text-align: center;
+}
+.button{
+    margin:0;
+}
+.section-calendar{
+    max-height: 400px;
+    overflow-y:scroll;
+}
+
+#dias, #pers-ocorrencias, #ocor, #dias-term{
+    width: 50px;
+    height: 40px;
+    background: #F1F3F4;
+    border:none;
+    border-radius: 5px;
+    margin-left: 2%;
+    padding:5px;
+    text-align: center;
+}
+#pers-ocorrencias, #ocor{
+    font-size:15px;
+    width: 100px;
+    
+}
+#dias-term{
+    margin-left: 100px;
+    border-radius: 0;
+}
+#ocor{
+    padding:10px 10px;
+    margin-left: 0;
+    border-radius: 0;
+    color:#aaa;
+}
+#input-group{
+    width: 100%;
+}
+.filter{
+    width: 97.5%;
+    /* border:1px solid red; */
+    text-align: right;
+}
+.filter button{
+    margin:0 auto;
+    border:1px solid #eee;
+    background:#fff;
+}
+.filter .search{
+    text-align: center;
+    margin-right: 14%;
+}
+.search{
+    margin:0 auto;
+    width: 50%;
+    border:0;
+    margin-bottom: 3%;
+    display: inline-block;
+    /* border:1px solid red; */
+}
+#search-sala{
+    width: 80%;
+    border:0;
+    border-bottom: 1px solid #aaa;
+    padding:5px;
+    background:#F4F4F4;
+}
+.fa-search{
+    cursor: pointer;
+    font-size: 18px;
+}
+.barra{
+    margin-top: 1%;
+    text-align: center;
+    background-color: #333;
+    color:#ccc;
+    width: 100%;
+}
