@@ -201,16 +201,16 @@
                      </tr>
                  </thead>
                  <tbody>
-                 <?php 
+                 <?php
                     foreach ($users as $key) {
                         echo "<tr>";
-                        echo "<td id='body-id'>".$key->idUsuario."</td>";
-                        echo "<td>".$key->nome."</td>";
-                        echo "<td>".$key->email."</td>";
-                        echo "<td>$key->permissao</td>";
-                        echo "<td>$key->funcao</td>";
-                        echo '<td><button type="button" id="btn-edit"class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>';
-                        echo ' <button type="button" id="btn-delete"class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button></td>';
+                          echo "<td id='body-id'>".$key->idUsuario."</td>";
+                          echo "<td>".$key->nome."</td>";
+                          echo "<td>".$key->email."</td>";
+                          echo "<td>".$key->permissao."</td>";
+                          echo "<td>".$key->funcao."</td>";
+                          echo '<td><button type="button" id="btn-edit"class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>';
+                          echo ' <button type="button" id="btn-delete"class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button></td>';
                         echo "</tr>";
                     }
                  ?>

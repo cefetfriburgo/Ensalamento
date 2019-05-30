@@ -18,13 +18,16 @@ class ControlUser extends CI_Controller{
         if(isset( $_SESSION[ 'logado' ]) ){
             $query = $this->db->query("select u.idUsuario, u.nome, u.email, p.permissao, f.funcao from usuario u 
             join permissao p on(p.idPermissao = u.idPermissao) join funcao f on(f.idFuncao = u.idFuncao);")->result();
-            $usuarios = array("users"=> $query); 
+            
+            $qtdRows = $this->db->count_all_results('usuario');
+            $usuarios = array("users"=> $query, "qtd"=>$qtdRows);
+
             $this->load->view('usuario/lista-user', $usuarios);
+        
         }else{
             header('Location: ../../');
             exit();
         }
-
         
     }
     public function cadastrar(){
@@ -67,17 +70,14 @@ class ControlUser extends CI_Controller{
 
     public function alterar(){
         
-        $idUsuario     =  $this->input->post('idUser');
-
+        $idUsuario    =  $this->input->post('idUser');
         $nome         =  $this->input->post('nome-user');
         $email        =  $this->input->post('email-user');
         $permissao    =  $this->input->post('permissao');
         $funcao       =  $this->input->post('funcao');
         $senha        =  $this->input->post('senha-user');
         $confirmSenha =  $this->input->post('confirm-user');
-
         if( $senha == $confirmSenha ){
-
             $data = array(
                 'nome' => $nome,
                 'email' => $email,
@@ -89,7 +89,8 @@ class ControlUser extends CI_Controller{
             $this->db->update('usuario', $data); 
             echo "<script> alert('Usuário Alterado!'); </script>";
             $this->viewListar();
-        }else{ die('Senhas precisam ser iguais.'); }
+        }else{ 
+            die('Senhas precisam ser iguais.'); }
         
     }
     public function excluir(){

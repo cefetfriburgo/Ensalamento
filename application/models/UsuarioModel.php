@@ -22,9 +22,7 @@ class UsuarioModel extends CI_Model{
         echo '<script>alert(" Usuário Inserido! ");</script>';
         session_start();
         $this->load->view('usuario/registro-user');
-    
     }
-
     //Getter's e Setter's
     public function setNome($nome){ 
         if(mb_strlen($nome) < 10){
@@ -48,6 +46,7 @@ class UsuarioModel extends CI_Model{
         }
         $this->senha = sha1($senha); 
     }
+
     public function setPermissao($permissao) { $this->permissao = $permissao; }
     public function setFuncao($funcao)       { $this->funcao = $funcao; }
     
