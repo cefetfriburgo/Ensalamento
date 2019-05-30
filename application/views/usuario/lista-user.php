@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" href="../../static/css/side-bar.css">
-    <link rel="stylesheet" href="../../static/css/lista-user.css">
+    <link rel="stylesheet" href="../../../static/css/side-bar.css">
+    <link rel="stylesheet" href="../../../static/css/lista-user.css">
  
 
 </head>
@@ -30,7 +30,7 @@
   <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
       <div class="sidebar-brand">
-        <a href="../controlHome/">Reserva de Salas</a>
+        <a href="../../controlHome/">Reserva de Salas</a>
         <div id="close-sidebar">
           <i class="fas fa-times"></i>
         </div>
@@ -63,7 +63,7 @@
             <span>General</span>
           </li>
           <li>
-              <a href="../controlHome/">
+              <a href="../../controlHome/">
                 <i class="fas fa-home"></i>
                 <span>Home</span>
               </a>
@@ -76,10 +76,10 @@
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a  onclick="bread('Registrar Sala')" href="../controlSala/viewRegistrar">Registrar Salas</a>
+                  <a  onclick="bread('Registrar Sala')" href="../../controlSala/viewRegistrar">Registrar Salas</a>
                 </li>
                 <li>
-                    <a onclick="bread('Listar Sala')"href="../controlSala/viewListar">Listar Salas</a>
+                    <a onclick="bread('Listar Sala')"href="../../controlSala/viewListar">Listar Salas</a>
                 </li>
               </ul>
             </div>
@@ -92,12 +92,12 @@
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a onclick="bread('Registrar Atv.')" href="../controlAtividade/viewRegistrar">Registrar Atividade
+                  <a onclick="bread('Registrar Atv.')" href="../../controlAtividade/viewRegistrar">Registrar Atividade
 
                   </a>
                 </li>
                 <li>
-                  <a onclick="bread('Listar Atv.')" href="../controlAtividade/viewListar">Listar Atividades</a>
+                  <a onclick="bread('Listar Atv.')" href="../../controlAtividade/viewListar">Listar Atividades</a>
                 </li>
               </ul>
             </div>
@@ -110,10 +110,10 @@
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a onclick="bread('Listar Usuário')" href="../controlUser/viewRegistrar">Registrar Usuário</a>
+                  <a onclick="bread('Listar Usuário')" href="../../controlUser/viewRegistrar">Registrar Usuário</a>
                 </li>
                 <li>
-                  <a onclick="bread('Listar Usuário')" href="../controlUser/viewListar">Listar Usuários</a>
+                  <a onclick="bread('Listar Usuário')" href="../../controlUser/viewListar">Listar Usuários</a>
                 </li>
               </ul>
             </div>
@@ -213,9 +213,12 @@
                           echo ' <button type="button" id="btn-delete"class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button></td>';
                         echo "</tr>";
                     }
+                    
                  ?>
+                 
                  </tbody>
          </table>
+         <?php echo $paginacao;?>
          <!-- FIM SEÇÃO DE LISTAGEM -->
       </div>
     </div>
@@ -331,8 +334,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="../../static/js/breadcrumb.js"></script>
-    <script src="../../static/js/search.js"></script>
+    <script src="../../../static/js/breadcrumb.js"></script>
+    <script src="../../../static/js/search.js"></script>
     
 </body>
 <style>

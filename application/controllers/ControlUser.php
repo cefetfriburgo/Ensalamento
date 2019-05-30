@@ -16,13 +16,24 @@ class ControlUser extends CI_Controller{
 
         session_start();
         if(isset( $_SESSION[ 'logado' ]) ){
-            $query = $this->db->query("select u.idUsuario, u.nome, u.email, p.permissao, f.funcao from usuario u 
-            join permissao p on(p.idPermissao = u.idPermissao) join funcao f on(f.idFuncao = u.idFuncao);")->result();
+            $this->load->library('pagination');
+            $this->load->model("UsuarioModel", "user");
+            $max = 5;
+            $start = (!$this->uri->segment("3")) ? 0 : $this->uri->segment("3");
             
-            $qtdRows = $this->db->count_all_results('usuario');
-            $usuarios = array("users"=> $query, "qtd"=>$qtdRows);
+            $config['base_url'] = '../../../index.php/controlUser/viewListar/';
+            $config['total_rows'] = $this->user->contaRegistros();
+            $config['per_page'] = $max;
+            $config['first_link'] = 'Primeiro';
+            $config['last_link'] = 'Último';
+            $config['next_link'] = 'Próximo';
+            $config['prev_link'] = 'Anterior';
 
-            $this->load->view('usuario/lista-user', $usuarios);
+            $this->pagination->initialize($config);
+
+            $param["paginacao"] =  $this->pagination->create_links();
+            $param["users"] =  $this->user->listar($start, $max);
+            $this->load->view('usuario/lista-user', $param);
         
         }else{
             header('Location: ../../');

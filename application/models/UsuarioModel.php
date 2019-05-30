@@ -23,6 +23,17 @@ class UsuarioModel extends CI_Model{
         session_start();
         $this->load->view('usuario/registro-user');
     }
+
+
+    public function listar($max, $start){
+        $query = $this->db->query("select u.idUsuario, u.nome, u.email, p.permissao, f.funcao from usuario u 
+        join permissao p on(p.idPermissao = u.idPermissao) join funcao f on(f.idFuncao = u.idFuncao) limit $max, $start;");
+
+        return $query->result();
+    }
+    function contaRegistros(){
+        return $this->db->count_all_results('usuario');
+    }
     //Getter's e Setter's
     public function setNome($nome){ 
         if(mb_strlen($nome) < 10){

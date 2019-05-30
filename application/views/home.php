@@ -88,7 +88,7 @@
                   <a  onclick="bread('Registrar Sala')" href="../controlSala/viewRegistrar">Registrar Salas</a>
                 </li>
                 <li>
-                    <a onclick="bread('Listar Sala')"href="../controlSala/viewListar">Listar Salas</a>
+                    <a onclick="bread('Listar Sala')"href="../controlSala/viewListar/">Listar Salas</a>
                 </li>
               </ul>
             </div>
@@ -106,7 +106,7 @@
                   </a>
                 </li>
                 <li>
-                  <a onclick="bread('Listar Atv.')" href="../controlAtividade/viewListar">Listar Atividades</a>
+                  <a onclick="bread('Listar Atv.')" href="../controlAtividade/viewListar/">Listar Atividades</a>
                 </li>
               </ul>
             </div>
@@ -122,7 +122,7 @@
                   <a onclick="bread('Listar Usuário')" href="../controlUser/viewRegistrar">Registrar Usuário</a>
                 </li>
                 <li>
-                  <a onclick="bread('Listar Usuário')" href="../controlUser/viewListar">Listar Usuários</a>
+                  <a onclick="bread('Listar Usuário')" href="../controlUser/viewListar/">Listar Usuários</a>
                 </li>
               </ul>
             </div>
