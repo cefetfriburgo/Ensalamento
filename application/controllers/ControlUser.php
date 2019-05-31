@@ -18,7 +18,7 @@ class ControlUser extends CI_Controller{
         if(isset( $_SESSION[ 'logado' ]) ){
             $this->load->library('pagination');
             $this->load->model("UsuarioModel", "user");
-            $max = 5;
+            $max = 4;
             $start = (!$this->uri->segment("3")) ? 0 : $this->uri->segment("3");
             
             $config['base_url'] = '../../../index.php/controlUser/viewListar/';

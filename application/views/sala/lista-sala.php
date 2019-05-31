@@ -193,6 +193,7 @@
          <table class="table  table-striped ">
                  <thead>
                      <tr>
+                     <th scope="col" id="title-id">Id</th>
                      <th scope="col">Nome</th>
                      <th scope="col">Capacidade</th>
                      <th scope="col">Tipo</th>
@@ -202,94 +203,21 @@
                      </tr>
                  </thead>
                  <tbody>
-                 <tr>
-                     <td>SALA 13</td>
-                     <td>26</td>
-                     <td>Normal</td>
-                     <td>Campus I</td>
-                     <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalVerRecursos">Vizualizar</button></td>
-                     <td>
-                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
-                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>SALA 13</td>
-                     <td>26</td>
-                     <td>Normal</td>
-                     <td>Campus I</td>
-                     <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalVerRecursos">Vizualizar</button></td>
-                     <td>
-                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
-                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>SALA 13</td>
-                     <td>26</td>
-                     <td>Normal</td>
-                     <td>Campus I</td>
-                     <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalVerRecursos">Vizualizar</button></td>
-                     <td>
-                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
-                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
-                     </td>
-                 </tr>
-                     <tr>
-                     <td>SALA 13</td>
-                     <td>26</td>
-                     <td>Normal</td>
-                     <td>Campus I</td>
-                     <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalVerRecursos">Vizualizar</button></td>
-                     <td>
-                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
-                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>SALA 13</td>
-                     <td>26</td>
-                     <td>Normal</td>
-                     <td>Campus I</td>
-                     <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalVerRecursos">Vizualizar</button></td>
-                     <td>
-                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
-                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>SALA 13</td>
-                     <td>26</td>
-                     <td>Normal</td>
-                     <td>Campus I</td>
-                     <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalVerRecursos">Vizualizar</button></td>
-                     <td>
-                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
-                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>SALA 13</td>
-                     <td>26</td>
-                     <td>Normal</td>
-                     <td>Campus I</td>
-                     <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalVerRecursos">Vizualizar</button></td>
-                     <td>
-                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
-                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>SALA 13</td>
-                     <td>26</td>
-                     <td>Normal</td>
-                     <td>Campus I</td>
-                     <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalVerRecursos">Vizualizar</button></td>
-                     <td>
-                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
-                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
-                     </td>
-                 </tr>
+                 <?php
+                    foreach ($salas as $key) {
+                        echo "<tr>";
+                          echo "<td id='body-id'>".$key->idSala."</td>";
+                          echo "<td>".$key->codigo."</td>";
+                          echo "<td>".$key->capacidade."</td>";
+                          echo "<td>".$key->tipo."</td>";
+                          echo "<td>".$key->local."</td>";
+                          echo '<td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalVerRecursos">Vizualizar</button></td>';
+                          echo '<td><button type="button" id="btn-edit"class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>';
+                          echo ' <button type="button" id="btn-delete"class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button></td>';
+                        echo "</tr>";
+                    }
+                    
+                 ?>
                  </tbody>
          </table>
          <!-- FIM SEÇÃO LISTAGEM DE SALAS -->
@@ -418,7 +346,11 @@
     <script src="../../static/js/breadcrumb.js"></script>
     <script src="../../static/js/search.js"></script>
 </body>
-
+<style>
+  #body-id, #title-id{
+    display: none;
+  }
+</style>
 </html>
 <script>
     $(document).ready(function(){

@@ -41,6 +41,18 @@
 #btn-reset{
     border:1px solid #ccc;
 }
+.erro{
+  position: relative;
+  top:10px;
+  border:1px solid rgb(221, 87, 87);
+  padding:6px;
+  box-shadow: 0 0 10px #00000070;
+  background: rgb(221, 87, 87);
+  color:#eee;
+  width: 60%;
+  margin:0 auto;
+  text-align: center;
+}
 /* FIM EDIÇÃO FORMULÁRIO */
 
 

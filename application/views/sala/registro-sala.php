@@ -180,7 +180,13 @@
       <div class="container">
             <h4>Registro de Salas</h4>
             <div class="bord"></div>
-            <form method="POST" action="#">
+              <?php
+                  if(isset($_SESSION['erro'])){
+                    echo '<div class="erro">'.$_SESSION['erro'].'</div>';
+                    unset($_SESSION['erro']);
+                  }
+              ?>
+            <form method="POST" action="cadastrar">
                 <div class="form-group">
                   <label for="nome-sala">Nome</label>
                   <input type="text" class="form-control" id="nome-sala" name="nome-sala">
@@ -190,12 +196,16 @@
                   <input type="number" class="form-control" id="capacidade" name="capacidade">
                 </div>
                 <div class="form-group">
-                  <label for="local">Local</label>
-                  <input type="text" class="form-control" id="local" name="local" placeholder="Campus I, Campus II...">
+                    <label for="local">Local</label>
+                      <select class="form-control" id="local" name="local">
+                        <option selected>Escolher...</option>
+                        <option value="1">Prédio 1</option>
+                        <option value="2">CIEP</option>
+                      </select>
                 </div>
                 <div class="form-group">
                     <label for="tipo">Tipo</label>
-                    <select class="form-control" id="tipo">
+                    <select class="form-control" id="tipo" name="tipo">
                       <option selected>Escolher...</option>
                       <option>Laboratório</option>
                       <option>Sala Normal</option>
@@ -226,15 +236,9 @@
                             <span></span>
                         </div>
                     </div>
-                    <div class="col" id="col2">
-                            
-                    </div>
-                    <div class="col" id="col3">
-                            
-                    </div>
-                    <div class="col" id="col4">
-                            
-                    </div>
+                    <div class="col" id="col2"></div>
+                    <div class="col" id="col3"></div>
+                    <div class="col" id="col4"></div>
                 </div>
                 <button type="button" class="btn btn-primary mt-1" id="btn-add-recurso"data-toggle="modal" data-target="#modalAddRecurso">
                     Adicionar Recurso
