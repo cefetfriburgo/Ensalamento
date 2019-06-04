@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" href="../../static/css/side-bar.css">
-    <link rel="stylesheet" href="../../static/css/lista-sala.css">
+    <link rel="stylesheet" href="../../../static/css/side-bar.css">
+    <link rel="stylesheet" href="../../../static/css/lista-sala.css">
  
 </head>
 
@@ -28,7 +28,7 @@
   <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
       <div class="sidebar-brand">
-        <a href="../controlHome/">Reserva de Salas</a>
+        <a href="../../controlHome">Reserva de Salas</a>
         <div id="close-sidebar">
           <i class="fas fa-times"></i>
         </div>
@@ -61,7 +61,7 @@
             <span>General</span>
           </li>
           <li>
-              <a href="../controlHome/">
+              <a href="../../controlHome">
                 <i class="fas fa-home"></i>
                 <span>Home</span>
               </a>
@@ -74,10 +74,10 @@
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a  onclick="bread('Registrar Sala')" href="../controlSala/viewRegistrar">Registrar Salas</a>
+                  <a  onclick="bread('Registrar Sala')" href="../../controlSala/viewRegistrar">Registrar Salas</a>
                 </li>
                 <li>
-                    <a onclick="bread('Listar Sala')"href="../controlSala/viewListar">Listar Salas</a>
+                    <a onclick="bread('Listar Sala')"href="../../controlSala/viewListar">Listar Salas</a>
                 </li>
               </ul>
             </div>
@@ -90,12 +90,12 @@
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a onclick="bread('Registrar Atv.')" href="../controlAtividade/viewRegistrar">Registrar Atividade
+                  <a onclick="bread('Registrar Atv.')" href="../../controlAtividade/viewRegistrar">Registrar Atividade
 
                   </a>
                 </li>
                 <li>
-                  <a onclick="bread('Listar Atv.')" href="../controlAtividade/viewListar">Listar Atividades</a>
+                  <a onclick="bread('Listar Atv.')" href="../../controlAtividade/viewListar">Listar Atividades</a>
                 </li>
               </ul>
             </div>
@@ -108,10 +108,10 @@
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a onclick="bread('Listar Usuário')" href="../controlUser/viewRegistrar">Registrar Usuário</a>
+                  <a onclick="bread('Listar Usuário')" href="../../controlUser/viewRegistrar">Registrar Usuário</a>
                 </li>
                 <li>
-                  <a onclick="bread('Listar Usuário')" href="../controlUser/viewListar">Listar Usuários</a>
+                  <a onclick="bread('Listar Usuário')" href="../../controlUser/viewListar">Listar Usuários</a>
                 </li>
               </ul>
             </div>
@@ -220,6 +220,10 @@
                  ?>
                  </tbody>
          </table>
+         <div class="paginacao">
+          <?php  echo $paginacao;  ?>
+         </div>
+         
          <!-- FIM SEÇÃO LISTAGEM DE SALAS -->
       </div>
     </div>
@@ -265,8 +269,9 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form method="POST" action="../alterar">
                         <div class="form-group">
+                            <input type="hidden" id="idSala" name="idSala">
                             <label for="nome-sala">Nome</label>
                             <input type="text" class="form-control" id="nome-sala" name="nome-sala">
                         </div>
@@ -275,18 +280,21 @@
                             <input type="number" class="form-control" id="capacidade" name="capacidade">
                         </div>
                         <div class="form-group">
-                            <label for="local">Local</label>
-                            <input type="text" class="form-control" id="local" name="local" placeholder="Campus I, Campus II...">
-                        </div>
+                          <label for="local">Local</label>
+                            <select class="form-control" id="local" name="local">
+                              <option selected>Escolher...</option>
+                              <option value="1">Prédio 1</option>
+                              <option value="2">CIEP</option>
+                            </select>
+                      </div>
                         <div class="form-group">
                             <label for="tipo">Tipo</label>
-                            <select class="form-control" id="tipo">
+                            <select class="form-control" id="tipo" name="tipo">
                                 <option selected>Escolher...</option>
-                                <option>Laboratório</option>
-                                <option>Sala Normal</option>
+                                <option value="1">Laboratório</option>
+                                <option value="2">Sala Normal</option>
                             </select>
                         </div>
-                    </form>
                     <label for="#">Recursos</label><br>
                     <div class="form-group" id="recursos">
                         <div class="col" id="col1">
@@ -312,10 +320,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" id="submit-recurso" class="btn btn-primary">Salvar Alteração</button>
+                    <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                          <button type="submit" id="submit-recurso" class="btn btn-primary">Salvar Alteração</button>
+                      </div>
+                    </form>
                 </div>
                 </div>
             </div>
@@ -332,10 +341,13 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                <button type="button" id="submit-recurso" class="btn btn-primary">Confirmar</button>
-            </div>
+            <form method="POST" action="excluir">
+              <input type="hidden" id="id_del" name="id-del">
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  <input type="submit" id="submit-recurso" class="btn btn-primary" value="Confirmar">
+              </div>  
+            </form>
             </div>
         </div>
     </div>
@@ -343,8 +355,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="../../static/js/breadcrumb.js"></script>
-    <script src="../../static/js/search.js"></script>
+    <script src="../../../static/js/breadcrumb.js"></script>
+    <script src="../../../static/js/search.js"></script>
 </body>
 <style>
   #body-id, #title-id{
@@ -356,7 +368,19 @@
     $(document).ready(function(){
       $("#meu-breadcrumb").append(localStorage.getItem('bread'));
       var url_atual = window.location.href;
-    console.log(url_atual);
+
+      $("body").on('click', '#btn-edit', function(){
+
+      var id_Sala = $(this).parent().siblings(0).html();
+        $("#idSala").val(id_Sala);
+
+      })
+      $("body").on('click', '#btn-delete', function(){
+
+        var id_Sala = $(this).parent().siblings(0).html();
+        $("#id_del").val(id_Sala);
+
+      })
     })
 
    

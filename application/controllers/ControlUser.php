@@ -18,16 +18,31 @@ class ControlUser extends CI_Controller{
         if(isset( $_SESSION[ 'logado' ]) ){
             $this->load->library('pagination');
             $this->load->model("UsuarioModel", "user");
-            $max = 4;
+            $max = 7;
             $start = (!$this->uri->segment("3")) ? 0 : $this->uri->segment("3");
             
-            $config['base_url'] = '../../../index.php/controlUser/viewListar/';
+            $config['base_url'] = '../../../controlUser/viewListar/';
             $config['total_rows'] = $this->user->contaRegistros();
             $config['per_page'] = $max;
-            $config['first_link'] = 'Primeiro';
-            $config['last_link'] = 'Último';
-            $config['next_link'] = 'Próximo';
-            $config['prev_link'] = 'Anterior';
+            $config['full_tag_open'] = '<ul class="pagination justify-content-center">';
+            $config['full_tag_close'] = '</ul>';
+            $config['attributes'] = ['class' => 'page-link'];
+            $config['first_link'] = false;
+            $config['last_link'] = false;
+            $config['first_tag_open'] = '<li class="page-item">';
+            $config['first_tag_close'] = '</li>';
+            $config['prev_link'] = '&laquo';
+            $config['prev_tag_open'] = '<li class="page-item">';
+            $config['prev_tag_close'] = '</li>';
+            $config['next_link'] = '&raquo';
+            $config['next_tag_open'] = '<li class="page-item">';
+            $config['next_tag_close'] = '</li>';
+            $config['last_tag_open'] = '<li class="page-item">';
+            $config['last_tag_close'] = '</li>';
+            $config['cur_tag_open'] = '<li class="page-item active"><a href="#" class="page-link">';
+            $config['cur_tag_close'] = '<span class="sr-only">(current)</span></a></li>';
+            $config['num_tag_open'] = '<li class="page-item">';
+            $config['num_tag_close'] = '</li>';
 
             $this->pagination->initialize($config);
 
@@ -108,7 +123,6 @@ class ControlUser extends CI_Controller{
         $id = $_POST[ 'id-del' ];
         $this->db->where('idUsuario', $id);
         $this->db->delete('usuario');
-        echo "<script> alert('Usuário Alterado!'); </script>";
         header('Location: viewListar');
     }
     private function verificaInputs($array){

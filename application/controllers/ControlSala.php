@@ -19,16 +19,31 @@ class ControlSala extends CI_Controller{
         if(isset( $_SESSION[ 'logado' ]) ){
             $this->load->library('pagination');
             $this->load->model("SalaModel", "sala");
-            $max = 4;
+            $max = 7;
             $start = (!$this->uri->segment("3")) ? 0 : $this->uri->segment("3");
             
-            $config['base_url'] = '../../../index.php/controlSala/viewListar/';
+            $config['base_url'] = '../../../controlSala/viewListar/';
             $config['total_rows'] = $this->sala->contaRegistros();
             $config['per_page'] = $max;
-            $config['first_link'] = 'Primeiro';
-            $config['last_link'] = 'Último';
-            $config['next_link'] = 'Próximo';
-            $config['prev_link'] = 'Anterior';
+            $config['full_tag_open'] = '<ul class="pagination justify-content-center">';
+            $config['full_tag_close'] = '</ul>';
+            $config['attributes'] = ['class' => 'page-link'];
+            $config['first_link'] = false;
+            $config['last_link'] = false;
+            $config['first_tag_open'] = '<li class="page-item">';
+            $config['first_tag_close'] = '</li>';
+            $config['prev_link'] = '&laquo';
+            $config['prev_tag_open'] = '<li class="page-item">';
+            $config['prev_tag_close'] = '</li>';
+            $config['next_link'] = '&raquo';
+            $config['next_tag_open'] = '<li class="page-item">';
+            $config['next_tag_close'] = '</li>';
+            $config['last_tag_open'] = '<li class="page-item">';
+            $config['last_tag_close'] = '</li>';
+            $config['cur_tag_open'] = '<li class="page-item active"><a href="#" class="page-link">';
+            $config['cur_tag_close'] = '<span class="sr-only">(current)</span></a></li>';
+            $config['num_tag_open'] = '<li class="page-item">';
+            $config['num_tag_close'] = '</li>';
 
             $this->pagination->initialize($config);
 
@@ -43,16 +58,14 @@ class ControlSala extends CI_Controller{
     }
 
     public function cadastrar(){
-        $idTipo = 0;
-        if($this->input->post('tipo') == 'Laboratório'){ $idTipo = 1; }
-        if($this->input->post('tipo') == 'Sala de aula'){ $idTtipo = 1; }
+        
         $inputs = array(
             "nome"       =>  $this->input->post('nome-sala'),
             "capacidade" =>  $this->input->post('capacidade'),
             "local"      =>  $this->input->post('local'),
-            "tipo"       =>  $idTipo
-        );
-            
+            "tipo"       =>  $this->input->post('tipo')
+        ); 
+        // print_r( $inputs );
         try{
             if($this->verificaInputs($inputs)){
 
@@ -72,6 +85,36 @@ class ControlSala extends CI_Controller{
         }
     }
 
+    public function alterar(){
+
+        $idSala   =  $this->input->post('idSala');
+        $nome         =  $this->input->post('nome-sala');
+        $capacidade   =  $this->input->post('capacidade');
+        $local        =  $this->input->post('local');
+        $tipo         =  $this->input->post('tipo');
+
+        $data = array(
+            'idSala' => $idSala,
+            'codigo' => $nome,
+            'capacidade' => $capacidade,
+            'idLocal' => $local,
+            'idSalaTipo' => $tipo
+        );
+
+        // print_r( $data );   
+        $this->db->where('idSala', $idSala);
+        $this->db->update('sala', $data); 
+        echo "<script> alert('Sala Alterada!'); </script>";
+        $this->viewListar();
+
+    }
+    public function excluir(){
+
+        $id = $_POST[ 'id-del' ];
+        $this->db->where('idSala', $id);
+        $this->db->delete('sala');
+        header('Location: viewListar');
+    }
     private function verificaInputs($array){
         foreach ($array as $key) {
             if(empty($key)){ throw new Exception("Não pode haver campos vazios."); }

@@ -10,9 +10,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </head>
     <body>
         <div class="container">
+            
             <h2>Login</h2>
-            <!-- <div class="erro">Dados inseridos Incorretos!</div> -->
-            <form class="form" name="formulario" method="POST" action="index.php/controllogin/logar">
+            <?php
+                if(isset($_SESSION['erro'])){
+                echo '<div class="erro">'.$_SESSION['erro'].'</div>';
+                unset($_SESSION['erro']);
+                }
+            ?>
+            <form class="form" name="formulario" method="POST" action="/controllogin/logar">
                 <input type="email" name="email" placeholder="Email" required/>
                 <input type="password" name="senha" required placeholder="Senha">
                 <input type="submit" name="confirma" value="Confirmar"/>

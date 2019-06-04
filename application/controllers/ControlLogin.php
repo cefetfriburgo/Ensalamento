@@ -5,39 +5,33 @@ class ControlLogin extends CI_Controller{
     public function index(){
         session_start();     
         if(isset( $_SESSION[ 'logado' ] )){
-            header('Location: index.php/controlHome/');
+            header('Location: /controlHome');
         }else { 
             $this->load->view('login/login'); 
         }
     }
     public function logar(){
-        $email = addslashes( $_POST['email'] );
-        $senha = addslashes( $_POST['senha'] );
 
-        $this->db->select('email, senha');
+        try{
+            $data = array(
+                'email' => $this->input->post('email'),
+                'senha' => $this->input->post('senha')
+            );
+            if($this->verificaInputs($data)){
 
-        $result = $this->db->get("usuario")->result();
-        $cont = 0;
-        foreach ($result as $key) {
-            if($key->email == $email && $key->senha ==  sha1( $senha )){
-                echo "<script> alert('Login Efetuado!'); </script>";
-                session_start();
+                $this->load->model("LoginModel", "loginObj");
+                $this->loginObj->setEmail($data['email']);
+                $this->loginObj->setSenha($data['senha']);
 
-                $this->db->select("nome, idPermissao");
-                $this->db->where("email", $key->email);
-                $res = $this->db->get("usuario")->result();
-                $nome = array("nomeUser"=>$res[0]->nome, "permissao"=>$res[0]->idPermissao);
-
-                $_SESSION[ 'logado' ] = true;
-                $_SESSION[ 'nome' ] = $res[0]->nome;
-                $_SESSION[ 'permissao' ] = $res[0]->idPermissao;
-                $this->load->view('home');
-                $cont++;
+                $this->loginObj->login($this->loginObj);
+                header('Location: ../controlHome/');
+                
             }
-        }
-        if($cont == 0){
-            header('Location: ../../');  //retorna ao index.php
-            exit();
+
+        }catch(Exception $e){
+            session_start();
+            $_SESSION[ 'erro' ] = $e->getMessage();     
+            header('Location: ../');
         }
     }
     public function verificaLogin(){
@@ -50,6 +44,12 @@ class ControlLogin extends CI_Controller{
         session_destroy();
         header('Location: ../../');
         exit();
+    }
+    private function verificaInputs($array){
+        foreach ($array as $key) {
+            if(empty($key)){ throw new Exception("Não pode haver campos vazios."); }
+        }
+        return true;
     }
 } 
 ?>

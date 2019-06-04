@@ -359,6 +359,8 @@
 
         var id_Usuario = $(this).parent().siblings(0).html();
         $("#id_del").val(id_Usuario);
+        
+
       })
     })
     jQuery(function ($) {

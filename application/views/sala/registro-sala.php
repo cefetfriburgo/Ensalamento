@@ -77,7 +77,7 @@
                   <a  onclick="bread('Registrar Sala')" href="../controlSala/viewRegistrar">Registrar Salas</a>
                 </li>
                 <li>
-                    <a onclick="bread('Listar Sala')"href="../controlSala/viewListar">Listar Salas</a>
+                    <a onclick="bread('Listar Sala')"href="../controlSala/viewListar/">Listar Salas</a>
                 </li>
               </ul>
             </div>
@@ -198,7 +198,7 @@
                 <div class="form-group">
                     <label for="local">Local</label>
                       <select class="form-control" id="local" name="local">
-                        <option selected>Escolher...</option>
+                        <option selected value="0">Escolher...</option>
                         <option value="1">Prédio 1</option>
                         <option value="2">CIEP</option>
                       </select>
@@ -206,9 +206,9 @@
                 <div class="form-group">
                     <label for="tipo">Tipo</label>
                     <select class="form-control" id="tipo" name="tipo">
-                      <option selected>Escolher...</option>
-                      <option>Laboratório</option>
-                      <option>Sala Normal</option>
+                      <option selected value="0">Escolher...</option>
+                      <option value="1">Laboratório</option>
+                      <option value="2">Sala Normal</option>
                     </select>
                 </div>
                 
