@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" href="../../static/css/side-bar.css">
-    <link rel="stylesheet" href="../../static/css/lista-atv.css">
+    <link rel="stylesheet" href="../../../static/css/side-bar.css">
+    <link rel="stylesheet" href="../../../static/css/lista-atv.css">
  
 
 </head>
@@ -32,7 +32,7 @@
   <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
       <div class="sidebar-brand">
-        <a href="../controlHome/">Reserva de Salas</a>
+        <a href="../../controlHome/">Reserva de Salas</a>
         <div id="close-sidebar">
           <i class="fas fa-times"></i>
         </div>
@@ -65,7 +65,7 @@
             <span>General</span>
           </li>
           <li>
-              <a href="../controlHome/">
+              <a href="../../controlHome/">
                 <i class="fas fa-home"></i>
                 <span>Home</span>
               </a>
@@ -78,10 +78,10 @@
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a  onclick="bread('Registrar Sala')" href="../controlSala/viewRegistrar">Registrar Salas</a>
+                  <a  onclick="bread('Registrar Sala')" href="../../controlSala/viewRegistrar">Registrar Salas</a>
                 </li>
                 <li>
-                    <a onclick="bread('Listar Sala')"href="../controlSala/viewListar">Listar Salas</a>
+                    <a onclick="bread('Listar Sala')"href="../../controlSala/viewListar/">Listar Salas</a>
                 </li>
               </ul>
             </div>
@@ -94,12 +94,12 @@
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a onclick="bread('Registrar Atv.')" href="../controlAtividade/viewRegistrar">Registrar Atividade
+                  <a onclick="bread('Registrar Atv.')" href="../../controlAtividade/viewRegistrar">Registrar Atividade
 
                   </a>
                 </li>
                 <li>
-                  <a onclick="bread('Listar Atv.')" href="../controlAtividade/viewListar">Listar Atividades</a>
+                  <a onclick="bread('Listar Atv.')" href="../../controlAtividade/viewListar">Listar Atividades</a>
                 </li>
               </ul>
             </div>
@@ -112,10 +112,10 @@
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a onclick="bread('Listar Usuário')" href="../controlUser/viewRegistrar">Registrar Usuário</a>
+                  <a onclick="bread('Listar Usuário')" href="../../controlUser/viewRegistrar">Registrar Usuário</a>
                 </li>
                 <li>
-                  <a onclick="bread('Listar Usuário')" href="../controlUser/viewListar">Listar Usuários</a>
+                  <a onclick="bread('Listar Usuário')" href="../../controlUser/viewListar">Listar Usuários</a>
                 </li>
               </ul>
             </div>
@@ -153,7 +153,7 @@
         <i class="fa fa-cog"></i>
         <span class="badge-sonar"></span>
       </a>
-      <a href="../controlLogin/logout">
+      <a href="../../controlLogin/logout">
         <i class="fa fa-power-off"></i>
       </a>
     </div>
@@ -193,87 +193,31 @@
          <table class="table table-striped ">
                  <thead>
                      <tr>
+                     <th id="title-id">Id</th>
                      <th scope="col">Nome</th>
                      <th scope="col">Tipo</th>
+                     <th scope="col">Curso Correlato</th>
                      <th scope="col">Informações</th>
                      <th scope="col">Opções</th>
                      </tr>
                  </thead>
                  <tbody>
-                 <tr>
-                     <td>Evento OpenLab</td>
-                     <td>Palestra</td>
-                     <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalView">Visualizar</button></td>
-                     <td>
-                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
-                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>Reunião CASINF</td>
-                     <td>Reunião</td>
-                     <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalView">Visualizar</button></td>
-                     <td>
-                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
-                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>Monitoria JavaEE</td>
-                     <td>Monitoria</td>
-                     <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalView">Visualizar</button></td>
-                     <td>
-                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
-                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>Evento OpenLab</td>
-                     <td>Palestra</td>
-                     <td><button type="button" class="btn btn-info"data-toggle="modal" data-target="#modalView">Visualizar</button></td>
-                     <td>
-                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
-                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>Reunião CASINF</td>
-                     <td>Reunião</td>
-                     <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalView">Visualizar</button></td>
-                     <td>
-                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
-                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>Monitoria JavaEE</td>
-                     <td>Monitoria</td>
-                     <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalView">Visualizar</button></td>
-                     <td>
-                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
-                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>Reunião CASINF</td>
-                     <td>Reunião</td>
-                     <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalView" >Visualizar</button></td>
-                     <td>
-                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
-                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td>Monitoria JavaEE</td>
-                     <td>Monitoria</td>
-                     <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalView" >Visualizar</button></td>
-                     <td>
-                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>
-                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
-                     </td>
-                 </tr>
+                 <?php
+                    foreach ($atvs as $key) {
+                        echo "<tr>";
+                          echo "<td id='body-id'>".$key->idAtividade."</td>";
+                          echo "<td>".$key->atividade."</td>";
+                          echo "<td>".$key->tipo."</td>";
+                          echo "<td>".$key->curso."</td>";
+                          echo '<td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalView">Visualizar</button></td>';
+                          echo '<td><button type="button" id="btn-edit"class="btn btn-success" data-toggle="modal" data-target="#modalEdit">Editar</button>';
+                          echo ' <button type="button" id="btn-delete"class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button></td>';
+                        echo "</tr>";
+                    }
+                 ?>
                  </tbody>
          </table>
+         <?php echo $paginacao;?>
          <!-- FIM SEÇÃO DE LISTAGEM -->
       </div>
     </div>
@@ -325,44 +269,52 @@
 
 <!-- MODAL EDITAR -->
     <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Editar Atividade</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Editar Atividade</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- <div class="erro">Dados inseridos Incorretos!</div> -->
+            <form method="POST" action="../alterar">
+                <input type="hidden" id="idAtv" name="idAtv">
+                <div class="form-group">
+                  <label for="nome-atv">Nome</label>
+                  <input type="text" class="form-control" id="nome-atv" name="nome-atv">
                 </div>
-                <div class="modal-body">
-                    <!-- <div class="erro">Dados inseridos Incorretos!</div> -->
-                    <form method="POST" action="#">
-                            <div class="form-group">
-                              <label for="nome-user">Nome</label>
-                              <input type="text" class="form-control" id="nome-user" name="nome-user">
-                            </div>
-                            <div class="form-group">
-                              <label for="email-user">Tipo</label>
-                              <input type="text" class="form-control" id="email-user" name="email-user">
-                            </div>
-                            <label for="email-user">Curso Associado</label>
-                            <div class="input-group mb-3">
-                                
-                                <select class="custom-select">
-                                    <option selected>Escolher...</option>
-                                    <option value="1">Engenharia Elétrica</option>
-                                    <option value="2">Física</option>
-                                    <option value="3">Gestão do Turismo</option>
-                                    <option value="4">Sistemas de Informação</option>
-                                </select>
-                            </div>
-                          </form>
+                <div class="form-group">
+                <label for="email-user">Tipo</label>
+                <select class="custom-select" name="tipo-atv">
+                      <option selected value="0">Escolher...</option>
+                      <?php
+                        foreach($tipoAtv as $key){
+                            echo "<option value='$key->idAtividadeTipo'>".$key->tipo."</option>";
+                        }
+                      ?>
+                  </select>
+              </div>
+                <label for="email-user">Curso Associado</label>
+                <div class="input-group mb-3">
+                    
+                    <select class="custom-select" name="curso">
+                        <option selected value="0">Escolher...</option>
+                        <option value="1">Engenharia Elétrica</option>
+                        <option value="3">Licenciatura em Física</option>
+                        <option value="2">Gestão do Turismo</option>
+                        <option value="4">Sistemas de Informação</option>
+                    </select>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" id="submit-recurso" class="btn btn-primary">Salvar Registro</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  <button type="submit" class="btn btn-primary">Salvar Registro</button>
                 </div>
-                </div>
-            </div>
+            </form>
+          </div>
+          </div>
+      </div>
     </div>
 <!-- FIM MODAL EDITAR -->
 
@@ -376,30 +328,43 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                <button type="button" id="submit-recurso" class="btn btn-primary">Confirmar</button>
-            </div>
+            <form method="POST" action="../excluir">
+              <input type="hidden" id="id_del" name="idDel">
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  <input type="submit" class="btn btn-primary" value="Confirmar">
+              </div>  
+            </form>
             </div>
         </div>
     </div>
-   
 </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="../../static/js/breadcrumb.js"></script>
-    <script src="../../static/js/search.js"></script>
-    
+    <script src="../../../static/js/breadcrumb.js"></script>
+    <script src="../../../static/js/search.js"></script>
 </body>
-
+<style>
+  #body-id, #title-id{
+    display: none;
+  }
+</style>
 </html>
 <script>
 
 
     $(document).ready(function(){
       $("#meu-breadcrumb").append(localStorage.getItem('bread'));
-      var url_atual = window.location.href;
+
+      $("body").on('click', '#btn-edit', function(){
+        var id_Usuario = $(this).parent().siblings(0).html();
+        $("#idAtv").val(id_Usuario);
+      })
+      $("body").on('click', '#btn-delete', function(){
+        var id_Usuario = $(this).parent().siblings(0).html();
+        $("#id_del").val(id_Usuario);
+      })
     })
     jQuery(function ($) {
 

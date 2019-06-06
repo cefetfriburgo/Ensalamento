@@ -182,24 +182,36 @@
           <!-- INÍCIO SEÇÃO DE REGISTRO -->
           <h4>Registro de Atividades</h4>
           <div class="bord"></div>
-          <!-- <div class="erro">Dados inseridos Incorretos!</div> -->
-          <form method="POST" action="#">
+          <?php
+              if(isset($_SESSION['erro'])){
+                echo '<div class="erro">'.$_SESSION['erro'].'</div>';
+                unset($_SESSION['erro']);
+              }
+            ?>
+          <form method="POST" action="cadastrar">
               <div class="form-group">
                 <label for="nome-user">Nome</label>
-                <input type="text" class="form-control" id="nome-user" name="nome-user">
+                <input type="text" class="form-control" id="nome-user" name="nome-atv">
               </div>
               <div class="form-group">
                 <label for="email-user">Tipo</label>
-                <input type="text" class="form-control" id="email-user" name="email-user">
+                <select class="custom-select" name="tipo-atv">
+                      <option selected value="0">Escolher...</option>
+                      <?php
+                        foreach($tipoAtv as $key){
+                            echo "<option value='$key->idAtividadeTipo'>".$key->tipo."</option>";
+                        }
+                      ?>
+                  </select>
               </div>
               <label for="email-user">Curso Associado</label>
               <div class="input-group mb-3">
                   
-                  <select class="custom-select">
-                      <option selected>Escolher...</option>
+                  <select class="custom-select" name="curso">
+                      <option selected value="0">Escolher...</option>
                       <option value="1">Engenharia Elétrica</option>
-                      <option value="2">Física</option>
-                      <option value="3">Gestão do Turismo</option>
+                      <option value="3">Licenciatura em Física</option>
+                      <option value="2">Gestão do Turismo</option>
                       <option value="4">Sistemas de Informação</option>
                   </select>
               </div>
@@ -207,6 +219,7 @@
                   <button type="submit" class="btn btn-primary mb-2" id="btn-save">Salvar Registro</button>
                   <button type="reset" class="btn btn-light mb-2" id="btn-reset">Cancelar</button>
               </div>
+              
           </form>
           <!-- FIM SEÇÃO DE REGISTRO -->
       </div>

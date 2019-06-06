@@ -213,9 +213,7 @@
                           echo ' <button type="button" id="btn-delete"class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button></td>';
                         echo "</tr>";
                     }
-                    
                  ?>
-                 
                  </tbody>
          </table>
          <?php echo $paginacao;?>
@@ -360,7 +358,6 @@
         var id_Usuario = $(this).parent().siblings(0).html();
         $("#id_del").val(id_Usuario);
         
-
       })
     })
     jQuery(function ($) {

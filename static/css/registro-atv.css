@@ -45,12 +45,12 @@
 .erro{
     position: relative;
     top:10px;
-    border:1px solid rgb(223, 108, 108);
+    border:1px solid rgb(221, 87, 87);
     padding:6px;
     box-shadow: 0 0 10px #00000070;
-    background: rgb(223, 108, 108);
+    background: rgb(221, 87, 87);
     color:#eee;
-    width: 30%;
+    width: 60%;
     margin:0 auto;
     text-align: center;
 }
