@@ -24,7 +24,7 @@ class ControlLogin extends CI_Controller{
                 $this->loginObj->setSenha($data['senha']);
 
                 $this->loginObj->login($this->loginObj);
-                header('Location: ../controlHome/');
+                header('Location: ../home/');
                 
             }
 

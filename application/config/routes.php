@@ -52,3 +52,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'controllogin';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+//home
+$route['home'] = "controlHome/index";
+//login
+$route['login/logout'] = "controlLogin/logout";
+$route['login/logar'] = "controlLogin/logar";
+//atividades
+$route['atividade/lista'] = "controlAtividade/viewListar";
+$route['atividade/registro'] = "controlAtividade/viewRegistrar";
+$route['atividade/cadastrar'] = "controlAtividade/cadastrar";
+$route['atividade/alterar'] = "controlAtividade/alterar";
+$route['atividade/excluir'] = "controlAtividade/excluir";
+//usuarios
+$route['usuario/lista'] = "controlUser/viewListar";
+$route['usuario/registro'] = "controlUser/viewRegistrar";
+$route['usuario/cadastrar'] = "controlUser/cadastrar";
+$route['usuario/alterar'] = "controlUser/alterar";
+$route['usuario/excluir'] = "controlUser/excluir";
+//salas
+$route['sala/lista'] = "controlSala/viewListar";
+$route['sala/registro'] = "controlSala/viewRegistrar";
+$route['sala/cadastrar'] = "controlSala/cadastrar";
+$route['sala/alterar'] = "controlSala/alterar";
+$route['sala/excluir'] = "controlSala/excluir";

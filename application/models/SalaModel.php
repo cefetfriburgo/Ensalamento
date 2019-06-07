@@ -12,13 +12,11 @@ class SalaModel extends CI_Model{
         $dados = array(
             'codigo'     => $sala->getNome(),
             'capacidade' => $sala->getCapacidade(),
-            'idLocal'    => $sala->getLocal(),
-            'idSalaTipo' => $sala->getTipo()
+            'idSalaTipo' => $sala->getTipo(),
+            'idLocal'    => $sala->getLocal()
         );
-
         $this->db->insert('sala', $dados);
         echo '<script>alert(" Sala Adicionada! ");</script>';
-
         session_start();
         $this->load->view('sala/registro-sala');
     }
@@ -36,8 +34,8 @@ class SalaModel extends CI_Model{
 
     //Getter's e Setter's
     public function setNome($nome){
-        if(mb_strlen($nome) < 2){
-            throw new Exception("O nome precia ter no mínimo 2 caracateres.");
+        if(mb_strlen($nome) < 3){
+            throw new Exception("O nome precisa ter no mínimo 3 caracateres.");
         }
         $this->nome = $nome;
     }

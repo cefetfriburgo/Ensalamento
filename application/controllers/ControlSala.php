@@ -65,7 +65,8 @@ class ControlSala extends CI_Controller{
             "local"      =>  $this->input->post('local'),
             "tipo"       =>  $this->input->post('tipo')
         ); 
-        // print_r( $inputs );
+        
+       
         try{
             if($this->verificaInputs($inputs)){
 
@@ -76,7 +77,7 @@ class ControlSala extends CI_Controller{
                 $this->sala->setLocal($inputs['local']);      // seto as variáveis 
                 $this->sala->setTipo($inputs['tipo']);
                 
-                $this->sala->inserir($this->sala);            // insiro o objeto no Banco         
+                $this->sala->inserir($this->sala);         // insiro o objeto no Banco         
             }
         }catch(Exception $e){
             session_start();

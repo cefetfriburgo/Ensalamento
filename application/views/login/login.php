@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 unset($_SESSION['erro']);
                 }
             ?>
-            <form class="form" name="formulario" method="POST" action="/controllogin/logar">
+            <form class="form" name="formulario" method="POST" action="/login/logar">
                 <input type="email" name="email" placeholder="Email" required/>
                 <input type="password" name="senha" required placeholder="Senha">
                 <input type="submit" name="confirma" value="Confirmar"/>

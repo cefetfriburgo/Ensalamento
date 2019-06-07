@@ -37,7 +37,7 @@
   <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
       <div class="sidebar-brand">
-        <a href="../controlHome/">Reserva de Salas</a>
+        <a href="../home/">Reserva de Salas</a>
         <div id="close-sidebar">
           <i class="fas fa-times"></i>
         </div>
@@ -72,7 +72,7 @@
             <span>General</span>
           </li>
           <li>
-              <a href="../controlHome/">
+              <a href="../home/">
                 <i class="fas fa-home"></i>
                 <span>Home</span>
               </a>
@@ -85,10 +85,10 @@
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a  onclick="bread('Registrar Sala')" href="../controlSala/viewRegistrar">Registrar Salas</a>
+                  <a  onclick="bread('Registrar Sala')" href="../sala/registro">Registrar Salas</a>
                 </li>
                 <li>
-                    <a onclick="bread('Listar Sala')"href="../controlSala/viewListar/">Listar Salas</a>
+                    <a onclick="bread('Listar Sala')"href="../sala/lista/">Listar Salas</a>
                 </li>
               </ul>
             </div>
@@ -101,12 +101,12 @@
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a onclick="bread('Registrar Atv.')" href="../controlAtividade/viewRegistrar">Registrar Atividade
+                  <a onclick="bread('Registrar Atv.')" href="../atividade/registro">Registrar Atividade
 
                   </a>
                 </li>
                 <li>
-                  <a onclick="bread('Listar Atv.')" href="../controlAtividade/viewListar/">Listar Atividades</a>
+                  <a onclick="bread('Listar Atv.')" href="../atividade/lista/">Listar Atividades</a>
                 </li>
               </ul>
             </div>
@@ -119,10 +119,10 @@
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a onclick="bread('Listar Usuário')" href="../controlUser/viewRegistrar">Registrar Usuário</a>
+                  <a onclick="bread('Listar Usuário')" href="../usuario/registro">Registrar Usuário</a>
                 </li>
                 <li>
-                  <a onclick="bread('Listar Usuário')" href="../controlUser/viewListar/">Listar Usuários</a>
+                  <a onclick="bread('Listar Usuário')" href="../usuario/lista/">Listar Usuários</a>
                 </li>
               </ul>
             </div>
@@ -160,7 +160,7 @@
         <i class="fa fa-cog"></i>
         <span class="badge-sonar"></span>
       </a>
-      <a href="../controlLogin/logout">
+      <a href="../login/logout">
         <i class="fa fa-power-off"></i>
       </a>
     </div>
@@ -170,7 +170,7 @@
    <!-- INÍCIO HEADER  -->
    <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="../controlHome/">Sistema de reserva de salas</a>
+                <a class="navbar-brand" href="../home/">Sistema de reserva de salas</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
                     <span class="navbar-toggler-icon"></span>
                 </button>
